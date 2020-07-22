@@ -1,5 +1,5 @@
 import React from "react";
-import Preview from 'Preview'
+import Preview from './cardPreview/Preview'
 import headerLogo from "../images/tarjetas-molonas.png";
 
 function Design() {
