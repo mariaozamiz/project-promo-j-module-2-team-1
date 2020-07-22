@@ -1,4 +1,5 @@
 import React from "react";
+import Preview from 'Preview'
 import headerLogo from "../images/tarjetas-molonas.png";
 
 function Design() {
@@ -12,53 +13,7 @@ function Design() {
         </div>
       </header>
       <main className="design__container">
-        <section className="preview">
-          <div className="preview__wrapper">
-            <button id="button-reset" className="button-reset js-button-reset">
-              <i className="far fa-trash-alt" aria-hidden="true"></i> reset
-            </button>
-            <div className="card">
-              <div className="card__id">
-                <h3 className="card__id_name js-card-name">Nombre Apellido</h3>
-                <p className="card__id_role js-card-job">Puesto de trabajo</p>
-              </div>
-              <div className="profile card__photo js-card-photo">
-                <div className="profile__image js__profile-image"></div>
-              </div>
-              <div className="card__contacts">
-                <ul className="js-contact__list">
-                  <li className="contact__icon js-telephone hidden">
-                    <i
-                      className="fas fa-mobile-alt js-icon-telephone"
-                      aria-hidden="true"
-                    ></i>
-                  </li>
-                  <li className="contact__icon js-email hidden">
-                    <a className="js-icon-email" target="_blank">
-                      <i className="far fa-envelope" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li className="contact__icon js-linkedin hidden">
-                    <a href="" className="js-icon-linkedin" target="_blank">
-                      <i
-                        className="fab fa-linkedin-in js-icon-linkedin"
-                        aria-hidden="true"
-                      ></i>
-                    </a>
-                  </li>
-                  <li className="contact__icon js-github hidden">
-                    <a href="" className="js-icon-github" target="_blank">
-                      <i
-                        className="fab fa-github-alt js-icon-github"
-                        aria-hidden="true"
-                      ></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Preview />
         <section className="customizer">
           <div className="customizer__wrapper">
             <form className="form">
