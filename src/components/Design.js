@@ -1,5 +1,6 @@
 import React from "react";
 import headerLogo from "../images/tarjetas-molonas.png";
+import Fill from "./Fill";
 
 function Design() {
   return (
