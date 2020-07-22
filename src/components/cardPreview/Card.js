@@ -1,5 +1,5 @@
 import React from 'react';
-import ListIcons from 'ListIcons';
+import ListIcons from './ListIcons';
 
 function Card() {
   return (
