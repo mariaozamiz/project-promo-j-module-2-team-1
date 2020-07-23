@@ -1,7 +1,20 @@
 import React from "react";
 import Preview from './cardPreview/Preview'
 import headerLogo from "../images/tarjetas-molonas.png";
+import Collapsible from './Collapsible';
 
+let userData = {
+  name: 'Mari Carmen',
+  job: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+  palette: '',
+}
+
+  
 function Design() {
   return (
     <div>
@@ -18,13 +31,7 @@ function Design() {
           <div className="customizer__wrapper">
             <form className="form">
               <fieldset className="form__design collapsable--open">
-                <div className="form__title js-collapsible__trigger">
-                  <h2 className="h2">
-                    <i className="far fa-object-ungroup"></i>
-                    Diseña
-                  </h2>
-                  <i className="fas fa-chevron-down"></i>
-                </div>
+                <Collapsible name='Diseña' icon="far fa-object-ungroup"/>
                 <div className="collapsible__content">
                   <legend>Colores</legend>
                   <label className="palette-1" htmlFor="palette-1">
@@ -66,13 +73,7 @@ function Design() {
                 </div>
               </fieldset>
               <fieldset className="form__fill">
-                <div className="form__title js-collapsible__trigger">
-                  <h2 className="h2">
-                    <i className="far fa-keyboard"></i>
-                    Rellena
-                  </h2>
-                  <i className="fas fa-chevron-down"></i>
-                </div>
+                <Collapsible name="Rellena" icon="far fa-keyboard"/>
                 <div className="collapsible__content">
                   <label htmlFor="name">Nombre completo</label>
                   <input
@@ -148,15 +149,9 @@ function Design() {
               </fieldset>
 
               <fieldset className="form__share">
-                <div className="form__title js-collapsible__trigger">
-                  <h2 className="h2">
-                    <i className="fas fa-share-alt"></i>
-                    Comparte
-                  </h2>
-                  <i className="fas fa-chevron-down"></i>
-                </div>
+                <Collapsible name="Comparte" icon="fas fa-share-alt"/>
                 <div className="collapsible__content">
-                  <button
+                <button
                     type="submit"
                     className="button__share js-button__share"
                   >
@@ -201,3 +196,5 @@ function Design() {
 }
 
 export default Design;
+
+
