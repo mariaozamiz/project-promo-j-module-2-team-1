@@ -1,5 +1,6 @@
 import React from "react";
 import FillImputs from "./FillImputs";
+import FillImputButton from "./FillImputButton";
 
 function Fill(props) {
   return (
@@ -23,22 +24,10 @@ function Fill(props) {
           name="job"
         />
 
-        <label htmlFor="profile-image">Imagen de perfil</label>
-        <div className="action button__container">
-          <button
-            className="action__upload-btn js__profile-trigger"
-            type="button"
-          >
-            Añadir imagen
-          </button>
-          <input
-            type="file"
-            name=""
-            id="img-selector"
-            className="action__hiddenField js__profile-upload-btn"
-          />
-          <div className="profile__preview js__profile-preview image__box"></div>
-        </div>
+        <FillImputButton
+          label="Imagen de perfil"
+          className="action button__container"
+        />
 
         <FillImputs
           label="Email"
