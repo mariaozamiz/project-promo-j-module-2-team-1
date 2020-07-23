@@ -2,6 +2,18 @@ import React from "react";
 import headerLogo from "../images/tarjetas-molonas.png";
 import Collapsible from './Collapsible';
 
+let userData = {
+  name: 'Mari Carmen',
+  job: '',
+  email: '',
+  phone: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+  palette: '',
+}
+
+  
 function Design() {
   return (
     <div>
@@ -229,3 +241,5 @@ function Design() {
 }
 
 export default Design;
+
+
