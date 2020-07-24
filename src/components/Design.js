@@ -1,7 +1,9 @@
 import React from "react";
 import headerLogo from "../images/tarjetas-molonas.png";
-import Fill from "./FillComponents/Fill";
 import Collapsible from "./Collapsible";
+import Preview from "./cardPreview/Preview";
+import Palletes from "./color-palletes/Palletes.js";
+import Fill from "./FillComponents/Fill";
 
 let userData = {
   name: "Mari Carmen",
@@ -26,103 +28,21 @@ function Design() {
       </header>
       <main className="design__container">
         <section className="preview">
-          <div className="preview__wrapper">
-            <button id="button-reset" className="button-reset js-button-reset">
-              <i className="far fa-trash-alt" aria-hidden="true"></i> reset
-            </button>
-            <div className="card">
-              <div className="card__id">
-                <h3 className="card__id_name js-card-name">Nombre Apellido</h3>
-                <p className="card__id_role js-card-job">Puesto de trabajo</p>
-              </div>
-              <div className="profile card__photo js-card-photo">
-                <div className="profile__image js__profile-image"></div>
-              </div>
-              <div className="card__contacts">
-                <ul className="js-contact__list">
-                  <li className="contact__icon js-telephone hidden">
-                    <i
-                      className="fas fa-mobile-alt js-icon-telephone"
-                      aria-hidden="true"
-                    ></i>
-                  </li>
-                  <li className="contact__icon js-email hidden">
-                    <a className="js-icon-email" target="_blank">
-                      <i className="far fa-envelope" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li className="contact__icon js-linkedin hidden">
-                    <a href="" className="js-icon-linkedin" target="_blank">
-                      <i
-                        className="fab fa-linkedin-in js-icon-linkedin"
-                        aria-hidden="true"
-                      ></i>
-                    </a>
-                  </li>
-                  <li className="contact__icon js-github hidden">
-                    <a href="" className="js-icon-github" target="_blank">
-                      <i
-                        className="fab fa-github-alt js-icon-github"
-                        aria-hidden="true"
-                      ></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <Preview />
         </section>
         <section className="customizer">
           <div className="customizer__wrapper">
             <form className="form">
               <fieldset className="form__design collapsable--open">
                 <Collapsible name="Diseña" icon="far fa-object-ungroup" />
-                <div className="collapsible__content">
-                  <legend>Colores</legend>
-                  <label className="palette-1" htmlFor="palette-1">
-                    <input
-                      id="palette-1"
-                      type="radio"
-                      value="1"
-                      name="color-palettes"
-                      className="js-palette"
-                    />
-                    <div className="color-cold-1"></div>
-                    <div className="color-cold-2"></div>
-                    <div className="color-cold-3"></div>
-                  </label>
-                  <label className="palette-2" htmlFor="palette-2">
-                    <input
-                      id="palette-2"
-                      type="radio"
-                      value="2"
-                      name="color-palettes"
-                      className="js-palette"
-                    />
-                    <div className="color-warm-1"></div>
-                    <div className="color-warm-2"></div>
-                    <div className="color-warm-3"></div>
-                  </label>
-                  <label className="palette-3" htmlFor="palette-3">
-                    <input
-                      id="palette-3"
-                      type="radio"
-                      value="3"
-                      name="color-palettes"
-                      className="js-palette"
-                    />
-                    <div className="color-neutral-1"></div>
-                    <div className="color-neutral-2"></div>
-                    <div className="color-neutral-3"></div>
-                  </label>
-                </div>
+                <Palletes />
               </fieldset>
-              <fieldset className="form__fill">
+              <fieldset className="form__fill collapsable--open">
                 <Collapsible name="Rellena" icon="far fa-keyboard" />
                 <Fill />
               </fieldset>
 
-              <fieldset className="form__share">
+              <fieldset className="form__share collapsable--open">
                 <Collapsible name="Comparte" icon="fas fa-share-alt" />
                 <div className="collapsible__content">
                   <button
@@ -163,6 +83,7 @@ function Design() {
             src="././assets/images/logo-adalab.png"
             rel="logo-adalab"
           />
+          >>>>>>> develop
         </div>
       </footer>
     </div>
