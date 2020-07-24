@@ -7,13 +7,13 @@ import Fill from "./FillComponents/Fill";
 
 let userData = {
   name: "Mari Carmen",
-  job: "",
-  email: "",
-  phone: "",
-  linkedin: "",
-  github: "",
+  job: "Cool Frontend Developer",
+  email: "lamari@gmail.com",
+  phone: "666-66-66-66",
+  linkedin: "lamari",
+  github: "lamari",
   photo: "",
-  palette: "",
+  palette: "1",
 };
 
 function Design() {
