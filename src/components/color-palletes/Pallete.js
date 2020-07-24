@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Pallete(props) {
-    console.log(props);
     return (
         <>
             <label

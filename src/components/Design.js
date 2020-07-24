@@ -111,7 +111,7 @@ function Design() {
                                 />
                                 <Palletes />
                             </fieldset>
-                            <fieldset className="form__fill">
+                            <fieldset className="form__fill collapsable--open">
                                 <Collapsible
                                     name="Rellena"
                                     icon="far fa-keyboard"
@@ -194,7 +194,7 @@ function Design() {
                                 </div>
                             </fieldset>
 
-                            <fieldset className="form__share">
+                            <fieldset className="form__share collapsable--open">
                                 <Collapsible
                                     name="Comparte"
                                     icon="fas fa-share-alt"
