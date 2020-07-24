@@ -4,6 +4,7 @@ import Collapsible from "./Collapsible";
 import Preview from "./cardPreview/Preview";
 import Palletes from "./color-palletes/Palletes.js";
 import Fill from "./FillComponents/Fill";
+import ShareContent from "./shareComponents/ShareContent";
 
 let userData = {
   name: "Mari Carmen",
@@ -44,32 +45,7 @@ function Design() {
 
               <fieldset className="form__share collapsable--open">
                 <Collapsible name="Comparte" icon="fas fa-share-alt" />
-                <div className="collapsible__content">
-                  <button
-                    type="submit"
-                    className="button__share js-button__share"
-                  >
-                    <i className="far fa-address-card"></i>
-                    Crear tarjeta
-                  </button>
-                </div>
-                <div className="js-twitter twitter hidden">
-                  <p className="js-twiter-paragraph twitter-paragraph">
-                    ¡Mira mi tarjeta de visita de AdaVillana!
-                  </p>
-                  <p className="twitter-url result-url">
-                    <a
-                      className="twitter-share-button"
-                      href="https://twitter.com/intent/tweet"
-                    ></a>
-                  </p>
-                  <div className="js-twitter-button twitter-button">
-                    <a className="twitter-link">
-                      <i className="fab fa-twitter"></i>
-                      Compartir en twitter
-                    </a>
-                  </div>
-                </div>
+                <ShareContent />
               </fieldset>
             </form>
           </div>
@@ -83,7 +59,6 @@ function Design() {
             src="././assets/images/logo-adalab.png"
             rel="logo-adalab"
           />
-          >>>>>>> develop
         </div>
       </footer>
     </div>
