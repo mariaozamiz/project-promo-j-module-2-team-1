@@ -28,7 +28,7 @@ function Design() {
       </header>
       <main className="design__container">
         <section className="preview">
-          <Preview />
+          <Preview data={userData}/>
         </section>
         <section className="customizer">
           <div className="customizer__wrapper">
