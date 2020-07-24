@@ -1,6 +1,6 @@
 import React from "react";
 import headerLogo from "../images/tarjetas-molonas.png";
-import Fill from "./Fill";
+import Fill from "./FillComponents/Fill";
 import Collapsible from "./Collapsible";
 
 let userData = {
