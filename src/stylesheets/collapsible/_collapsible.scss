@@ -1,0 +1,19 @@
+.form__title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.h2 {
+  font-size: 18px;
+  font-family: $primary-font;
+  font-weight: 400;
+  color: $color-dark;
+  text-transform: uppercase;
+  width: 320px;
+
+  i {
+    margin-right: 10px;
+    color: $color-tertiary;
+  }
+}
