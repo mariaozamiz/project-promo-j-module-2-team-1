@@ -1,6 +1,7 @@
 @import "core/variables";
 @import "core/mixins";
 @import "core/reset";
+
 @import "layout/page";
 @import "layout/header";
 @import "layout/header_design";
@@ -8,4 +9,14 @@
 @import "layout/footer";
 @import "layout/preview";
 @import "layout/customizer";
+
+@import "pages/design";
+
+@import "collapsible/collapsible";
 @import "pages/index";
+
+@import "fill/fill";
+@import "fill/fill_imput_button";
+@import "fill/fill_imputs";
+@import "fill/imput_button";
+@import "fill/profile_button";

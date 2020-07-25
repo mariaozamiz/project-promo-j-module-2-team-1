@@ -1,6 +1,8 @@
 import React from "react";
 import ProfileButton from "./ProfileButton";
 import InputButton from "./InputButton";
+import "../stylesheets/core/mixins.scss";
+import "../stylesheets/core/variables.scss";
 
 function FillImputButton(props) {
   return (

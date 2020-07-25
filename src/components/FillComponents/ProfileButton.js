@@ -1,4 +1,6 @@
 import React from "react";
+import "../stylesheets/core/mixins.scss";
+import "../stylesheets/core/variables.scss";
 
 function ProfileButton(props) {
   return (

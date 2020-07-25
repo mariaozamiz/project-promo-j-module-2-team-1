@@ -1,6 +1,10 @@
 import React from "react";
 import FillImputs from "./FillImputs";
 import FillImputButton from "./FillImputButton";
+import "../stylesheets/fill/fill_imput_button.scss";
+import "../stylesheets/fill/fill_imputs.scss";
+import "../stylesheets/core/mixins.scss";
+import "../stylesheets/core/variables.scss";
 
 function Fill(props) {
   return (
