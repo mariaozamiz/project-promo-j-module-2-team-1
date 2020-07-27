@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import headerLogo from "../images/tarjetas-molonas.png";
 import Collapsible from "./Collapsible";
 import Preview from "./cardPreview/Preview";
@@ -19,6 +19,11 @@ let userData = {
 };
 
 function Design() {
+
+  const [data, setData] = useState(userData)
+
+  
+
   return (
     <div>
       <header className="header_design">
@@ -30,7 +35,7 @@ function Design() {
       </header>
       <main className="design__container">
         <section className="preview">
-          <Preview />
+          <Preview data={data}/>
         </section>
         <section className="customizer">
           <div className="customizer__wrapper">
