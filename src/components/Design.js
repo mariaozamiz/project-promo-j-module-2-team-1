@@ -5,10 +5,7 @@ import Preview from "./cardPreview/Preview";
 import Palletes from "./color-palletes/Palletes.js";
 import Fill from "./FillComponents/Fill";
 import ShareContent from "./shareComponents/ShareContent";
-import "../stylesheets/collapsible/collapsible.scss";
-import "../stylesheets/fill/fill.scss";
-import "../stylesheets/core/mixins.scss";
-import "../stylesheets/core/variables.scss";
+
 
 let userData = {
   name: "Mari Carmen",
