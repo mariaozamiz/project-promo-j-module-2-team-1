@@ -1,0 +1,35 @@
+.contact__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px $hospital-green;
+  color: $color-primary;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.contact__icon2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px $tomato;
+  color: $dried-blood;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.contact__icon3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px $light-grey-blue;
+  color: $slate;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
