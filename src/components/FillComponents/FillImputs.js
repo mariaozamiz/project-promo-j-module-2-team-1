@@ -1,6 +1,12 @@
 import React from "react";
 
+
 function FillImputs(props) {
+
+  const imputValue = (ev) => {
+    props.imputValue(ev)
+  }
+
   return (
     <>
       <label>{props.label}</label>
@@ -10,6 +16,7 @@ function FillImputs(props) {
         id={props.id}
         type={props.type}
         name={props.name}
+        onKeyUp={imputValue}
       />
     </>
   );

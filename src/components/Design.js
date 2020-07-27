@@ -1,6 +1,6 @@
-import React from 'react';
-import headerLogo from '../images/tarjetas-molonas.png';
+import React, { useState } from 'react';
 import Header from './HeaderFooter/Header';
+import headerLogo from '../images/tarjetas-molonas.png';
 import Collapsible from './Collapsible';
 import Preview from './cardPreview/Preview';
 import Palletes from './color-palletes/Palletes.js';
@@ -20,12 +20,20 @@ let userData = {
 };
 
 function Design() {
+  const [data, setData] = useState(userData);
+
+  const handleImputsValue = (ev) => {
+    setData({
+      name: ev.target.value,
+    });
+  };
+
   return (
     <div>
       <Header />
       <main className='design__container'>
         <section className='preview'>
-          <Preview />
+          <Preview data={data} />
         </section>
         <section className='customizer'>
           <div className='customizer__wrapper'>
@@ -36,7 +44,7 @@ function Design() {
               </fieldset>
               <fieldset className='form__fill collapsable--open'>
                 <Collapsible name='Rellena' icon='far fa-keyboard' />
-                <Fill />
+                <Fill imputValue={handleImputsValue} />
               </fieldset>
 
               <fieldset className='form__share collapsable--open'>
