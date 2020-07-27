@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-light;
-  width: 100vw;
+  width: 100%;
 
   border-top: 1px $white-two solid;
   font-family: $primary-font;
@@ -30,7 +30,6 @@
       text-align: center;
       line-height: 20px;
     }
-
     .logo-adalab {
       width: 103px;
       height: 40px;
