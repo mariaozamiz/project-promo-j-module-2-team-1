@@ -35,9 +35,7 @@ function ShareContent(props) {
         <a className="twitter-link" href="">
           {" "}
           {/*agregar aquí href con enlace a twitter y la url*/}
-          <span>
-            <i className="fab fa-twitter"></i>Compartir en twitter
-          </span>
+          <i className="fab fa-twitter"></i>Compartir en twitter
         </a>
       </div>
     );
