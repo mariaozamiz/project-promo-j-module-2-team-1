@@ -8,22 +8,23 @@ function Fill(props) {
     <>
       <div className="collapsible__content">
         <FillImputs
+          name="name"
           label="Nombre completo"
           className="js-input-name"
           placeholder="Ej: Sally Jill"
           id="name"
           type="text"
-          name="name"
           imputValue={props.imputValue}
         />
 
         <FillImputs
+          name="job"
           label="Puesto"
           className="js-input-job"
           placeholder="Ej: Font-end unicorn"
           id="job"
           type="text"
-          name="job"
+          imputValue={props.imputValue}
         />
 
         <FillImputButton

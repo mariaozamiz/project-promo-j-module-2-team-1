@@ -3,7 +3,6 @@ import ButtonReset from './ButtonReset';
 import Card from './Card'; 
 
 function Preview(props) {
-  console.log(props);
   return (
     <section className='preview'>
       <div className='preview__wrapper'>
