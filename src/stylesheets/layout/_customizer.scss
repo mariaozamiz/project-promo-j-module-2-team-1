@@ -60,7 +60,6 @@
 
 .collapsible__content {
   display: block;
-  text-align: center;
 }
 
 // Colapsables abiertos
@@ -284,6 +283,7 @@
       width: 199px;
       height: 50px;
       margin: 30px;
+      margin-left: 33%;
       background-color: $color-tertiary;
       border-radius: 12px;
       font-size: 14px;
