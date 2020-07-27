@@ -14,6 +14,7 @@ function Fill(props) {
           id="name"
           type="text"
           name="name"
+          imputValue={props.imputValue}
         />
 
         <FillImputs

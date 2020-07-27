@@ -21,8 +21,14 @@ let userData = {
 function Design() {
 
   const [data, setData] = useState(userData)
+  const[name, setName] = useState('Mari Carmen')
 
-  
+
+  const handleImputsValue = (ev) => {
+    const imputValue = ev.currentTarget.value;
+    setName(imputValue)
+
+  }
 
   return (
     <div>
@@ -46,7 +52,7 @@ function Design() {
               </fieldset>
               <fieldset className="form__fill collapsable--open">
                 <Collapsible name="Rellena" icon="far fa-keyboard" />
-                <Fill />
+                <Fill imputValue={handleImputsValue}/>
               </fieldset>
 
               <fieldset className="form__share collapsable--open">
