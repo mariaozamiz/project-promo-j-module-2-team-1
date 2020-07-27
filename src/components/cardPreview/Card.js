@@ -7,7 +7,7 @@ function Card(props) {
     <div className='card'>
       <div className='card__id'>
         <h3 className='card__id_name js-card-name'>{props.data.name || 'Nombre y Apellidos'}</h3>
-        <p className='card__id_role js-card-job'>{props.data.job || 'Nombre y Apellidos'}</p>
+        <p className='card__id_role js-card-job'>{props.data.job || 'Front End Developer'}</p>
       </div>
       <div className='profile card__photo js-card-photo'>
         <div className='profile__image js__profile-image'></div>
