@@ -8,16 +8,7 @@ import Fill from './FillComponents/Fill';
 import ShareContent from './shareComponents/ShareContent';
 import Footer from './HeaderFooter/Footer';
 
-let userData = {
-  name: 'Mari Carmen',
-  job: 'Cool Frontend Developer',
-  email: 'lamari@gmail.com',
-  phone: '666-66-66-66',
-  linkedin: 'lamari',
-  github: 'lamari',
-  photo: '',
-  palette: '2',
-};
+let userData = {};
 
 function Design() {
   const [data, setData] = useState(userData);
@@ -37,13 +28,20 @@ function Design() {
       [attr]: value,
     });
   };
+
   console.log(data);
+
+  const resetUserData = () => {
+    console.log(userData);
+    setData(userData);
+  };
+
   return (
     <div>
       <Header />
       <main className='design__container'>
         <section className='preview'>
-          <Preview data={data} />
+          <Preview data={data} reset={resetUserData} />
         </section>
         <section className='customizer'>
           <div className='customizer__wrapper'>

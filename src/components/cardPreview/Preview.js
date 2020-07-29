@@ -1,13 +1,13 @@
 import React from 'react';
 import ButtonReset from './ButtonReset';
-import Card from './Card'; 
+import Card from './Card';
 
 function Preview(props) {
   return (
     <section className='preview'>
       <div className='preview__wrapper'>
-        <ButtonReset />
-        <Card data={props.data}/>
+        <ButtonReset reset={props.reset} />
+        <Card data={props.data} />
       </div>
     </section>
   );
