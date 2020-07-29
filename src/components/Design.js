@@ -16,15 +16,25 @@ let userData = {
   linkedin: 'lamari',
   github: 'lamari',
   photo: '',
-  palette: '1',
+  palette: '2',
 };
 
 function Design() {
   const [data, setData] = useState(userData);
 
   const handleImputsValue = (ev) => {
+    const value = ev.target.value;
+    const attr = ev.target.name;
+    data[attr] = value;
     setData({
-      name: ev.target.value,
+      /* name: data.name,
+      job: data.job,
+      email: data.email,
+      linkedin: data.linkedin,
+      github: data.github,
+      phone: data.phone, */
+      ...data,
+      [attr]: value,
     });
   };
 
