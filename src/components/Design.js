@@ -22,7 +22,7 @@ let userData = {
 function Design() {
   const [data, setData] = useState(userData);
 
-  const handleImputsValue = (ev) => {
+  const handleInputsValue = (ev) => {
     const value = ev.target.value;
     const attr = ev.target.name;
     data[attr] = value;
@@ -37,7 +37,7 @@ function Design() {
       [attr]: value,
     });
   };
-
+  console.log(data);
   return (
     <div>
       <Header />
@@ -54,7 +54,7 @@ function Design() {
               </fieldset>
               <fieldset className='form__fill collapsable--open'>
                 <Collapsible name='Rellena' icon='far fa-keyboard' />
-                <Fill imputValue={handleImputsValue} />
+                <Fill inputValue={handleInputsValue} />
               </fieldset>
 
               <fieldset className='form__share collapsable--open'>

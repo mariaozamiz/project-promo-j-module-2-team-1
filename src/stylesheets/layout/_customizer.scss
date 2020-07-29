@@ -272,9 +272,7 @@
         text-align: center;
       }
     }
-    .hidden {
-      display: none;
-    }
+
     h2 {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -303,4 +301,8 @@
       }
     }
   }
+}
+
+.hidden {
+  display: none;
 }

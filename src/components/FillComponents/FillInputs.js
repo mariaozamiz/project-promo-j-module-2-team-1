@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
-
-function FillImputs(props) {
-
-  const imputValue = (ev) => {
-    props.imputValue(ev)
-  }
+function FillInputs(props) {
+  const inputValue = (ev) => {
+    props.inputValue(ev);
+  };
 
   return (
     <>
@@ -16,9 +14,9 @@ function FillImputs(props) {
         id={props.id}
         type={props.type}
         name={props.name}
-        onKeyUp={imputValue}
+        onKeyUp={inputValue}
       />
     </>
   );
 }
-export default FillImputs;
+export default FillInputs;
