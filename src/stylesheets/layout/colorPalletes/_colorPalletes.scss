@@ -1,0 +1,117 @@
+// .customizer {
+//   &__wrapper {
+//       display: flex;
+//       width: 100%;
+//       padding: 20px;
+//   }
+// }
+
+.form {
+    width: 100%;
+    .form__title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .h2 {
+        font-size: 18px;
+        font-family: $primary-font;
+        font-weight: 400;
+        color: $color-dark;
+        text-transform: uppercase;
+        width: 320px;
+
+        i {
+            margin-right: 10px;
+            color: $color-tertiary;
+        }
+    }
+
+    &__design {
+        border: none;
+        border-bottom: 1px solid $white-two;
+        legend {
+            font-size: 14px;
+            font-family: $primary-font;
+            color: $color-dark;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 22px;
+            min-width: 320px;
+            max-width: 600px;
+        }
+
+        .palette-1 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            input {
+                width: 17px;
+                height: 17px;
+            }
+            .color-cold-1 {
+                @include color-container-mobile;
+                background-color: $color-primary;
+                margin-left: 10px;
+            }
+            .color-cold-2 {
+                @include color-container-mobile;
+                background-color: $color-secondary;
+            }
+            .color-cold-3 {
+                @include color-container-mobile;
+                background-color: $hospital-green;
+            }
+        }
+        .palette-2 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            input {
+                width: 17px;
+                height: 17px;
+                padding-right: 10px;
+            }
+            .color-warm-1 {
+                @include color-container-mobile;
+                background-color: $dried-blood;
+                margin-left: 10px;
+            }
+            .color-warm-2 {
+                @include color-container-mobile;
+                background-color: $rusty-red;
+            }
+            .color-warm-3 {
+                @include color-container-mobile;
+                background-color: $tomato;
+            }
+        }
+        .palette-3 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            input {
+                width: 17px;
+                height: 17px;
+                padding-right: 10px;
+            }
+            .color-neutral-1 {
+                @include color-container-mobile;
+                background-color: $slate;
+                margin-left: 10px;
+            }
+            .color-neutral-2 {
+                @include color-container-mobile;
+                background-color: $faded-orange;
+            }
+            .color-neutral-3 {
+                @include color-container-mobile;
+                background-color: $light-grey-blue;
+            }
+        }
+    }
+}

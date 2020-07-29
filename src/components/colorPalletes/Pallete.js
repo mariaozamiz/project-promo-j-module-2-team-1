@@ -11,6 +11,7 @@ function Pallete(props) {
                     id={`palette-${props.number}`}
                     type="radio"
                     value={props.number}
+                    checked=""
                     name="color-palettes"
                     className="js-palette" //estas clases nos las tenemos que cargar, dice Miguel
                 />
