@@ -32,9 +32,10 @@ function Design() {
   console.log(data);
 
   const resetUserData = () => {
-    console.log(userData);
     setData(userData);
   };
+
+  console.log(data);
 
   return (
     <div>
@@ -52,7 +53,7 @@ function Design() {
               </fieldset>
               <fieldset className='form__fill collapsable--open'>
                 <Collapsible name='Rellena' icon='far fa-keyboard' />
-                <Fill inputValue={handleInputsValue} />
+                <Fill inputValue={handleInputsValue} data={data} />
               </fieldset>
 
               <fieldset className='form__share collapsable--open'>

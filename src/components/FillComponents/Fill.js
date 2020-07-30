@@ -13,6 +13,7 @@ function Fill(props) {
           placeholder='Ej: Sally Jill'
           id='name'
           type='text'
+          value={props.data.name}
           inputValue={props.inputValue}
         />
 
@@ -23,6 +24,7 @@ function Fill(props) {
           placeholder='Ej: Font-end unicorn'
           id='job'
           type='text'
+          value={props.data.job}
           inputValue={props.inputValue}
         />
 
@@ -38,6 +40,7 @@ function Fill(props) {
           id='email'
           type='email'
           name='email'
+          value={props.data.email}
           inputValue={props.inputValue}
         />
 
@@ -48,6 +51,7 @@ function Fill(props) {
           id='telephone'
           type='number'
           name='telephone'
+          value={props.data.phone}
           inputValue={props.inputValue}
         />
 
@@ -58,6 +62,7 @@ function Fill(props) {
           id='linkedin'
           type='text'
           name='linkedin'
+          value={props.data.linkedin}
           inputValue={props.inputValue}
         />
 
@@ -68,6 +73,7 @@ function Fill(props) {
           id='github'
           type='text'
           name='github'
+          value={props.data.github}
           inputValue={props.inputValue}
         />
       </div>
