@@ -7,21 +7,28 @@ const colorPalletes = [
   ['color-neutral-1', 'color-neutral-2', 'color-neutral-3'],
 ];
 
-function Palletes() {
+function Palletes(props) {
   function renderPalletes() {
     return colorPalletes.map((element, index) => {
-      return <Pallete key={index} number={index + 1} colors={element} />;
+      return (
+        <Pallete
+          key={index}
+          number={index + 1}
+          colors={element}
+          inputValue={props.inputValue}
+        />
+      );
     });
   }
 
   return (
     <>
-      <div className='collapsible__content hidden'>
+      <div className='collapsible__content'>
         <legend>Colores</legend>
         {renderPalletes()}
       </div>
     </>
   );
 }
-
+//borré la clase hidden del className="collapsible__content"
 export default Palletes;

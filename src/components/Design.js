@@ -3,7 +3,7 @@ import Header from './HeaderFooter/Header';
 import headerLogo from '../images/tarjetas-molonas.png';
 import Collapsible from './Collapsible';
 import Preview from './cardPreview/Preview';
-import Palletes from './color-palletes/Palletes.js';
+import Palletes from './colorPalletes/Palletes.js';
 import Fill from './FillComponents/Fill';
 import ShareContent from './shareComponents/ShareContent';
 import Footer from './HeaderFooter/Footer';
@@ -13,10 +13,8 @@ let userData = {};
 function Design() {
   const [data, setData] = useState(userData);
 
-  const handleInputsValue = (ev) => {
-    const value = ev.target.value;
-    const attr = ev.target.name;
-    data[attr] = value;
+  const handleInputsValue = (inputInfo) => {
+    console.log(inputInfo);
     setData({
       /* name: data.name,
       job: data.job,
@@ -25,17 +23,18 @@ function Design() {
       github: data.github,
       phone: data.phone, */
       ...data,
-      [attr]: value,
+      [inputInfo.attr]: inputInfo.value,
     });
   };
 
-  console.log(data);
-
   const resetUserData = () => {
-    setData(userData);
+    setData({ ...userData });
   };
 
-  console.log(data);
+  /*const handlePalleteValue = (ev) => {
+    console.log('paleta', ev);
+  };*/
+  console.log(userData, data, userData === data);
 
   return (
     <div>
@@ -49,7 +48,7 @@ function Design() {
             <form className='form'>
               <fieldset className='form__design collapsable--open'>
                 <Collapsible name='Diseña' icon='far fa-object-ungroup' />
-                <Palletes />
+                <Palletes inputValue={handleInputsValue} />
               </fieldset>
               <fieldset className='form__fill collapsable--open'>
                 <Collapsible name='Rellena' icon='far fa-keyboard' />

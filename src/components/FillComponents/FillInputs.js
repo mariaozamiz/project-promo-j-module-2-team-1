@@ -2,7 +2,12 @@ import React from 'react';
 
 function FillInputs(props) {
   const inputValue = (ev) => {
-    props.inputValue(ev);
+    const value = ev.target.value;
+    const attr = ev.target.name;
+    props.inputValue({
+      attr: attr,
+      value: value,
+    });
   };
 
   return (

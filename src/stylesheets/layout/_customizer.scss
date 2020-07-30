@@ -1,308 +1,308 @@
 .customizer {
-  &__wrapper {
-    display: flex;
-    width: 100%;
-    padding: 20px;
-  }
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+    }
 }
 
 // Botón imagen
 .action {
-  text-align: center;
-  margin: 0;
+    text-align: center;
+    margin: 0;
 }
 .action__upload-btn {
-  display: flex;
-  width: 140px;
-  height: 30px;
-  background-color: $color-tertiary;
-  border-radius: 3px;
-  font-size: 14px;
-  font-family: $primary-font;
-  color: $color-light;
-  border: none;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    width: 140px;
+    height: 30px;
+    background-color: $color-tertiary;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: $primary-font;
+    color: $color-light;
+    border: none;
+    align-items: center;
+    justify-content: center;
 }
 .action__hiddenField {
-  /* Ocultamos el input de tipo "file" porque no podemos 
+    /* Ocultamos el input de tipo "file" porque no podemos 
   darle los estilos que queremos */
-  display: none;
+    display: none;
 }
 
 .profile {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 .profile__image,
 .profile__preview {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
 }
 .profile__image {
-  width: 100%;
-  height: 100%;
-  margin-left: 0;
-  background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    background-size: cover;
 }
 
 .profile__preview {
-  margin-left: 15px;
-  background-size: cover;
+    margin-left: 15px;
+    background-size: cover;
 }
 
 // Colapsables
 .js-collapsible__trigger {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .collapsible__content {
-  display: block;
+    display: block;
 }
 
 // Colapsables abiertos
 .collapsable--open {
-  .collapsable--open {
-    display: block;
-  }
+    .collapsable--open {
+        display: block;
+    }
 
-  .fa-chevron-down {
-    transform: rotate(-180deg);
-  }
+    .fa-chevron-down {
+        transform: rotate(-180deg);
+    }
 }
 // Formulario
 .form {
-  width: 100%;
-  .form__title {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-  }
-
-  .h2 {
-    font-size: 18px;
-    font-family: $primary-font;
-    font-weight: 400;
-    color: $color-dark;
-    text-transform: uppercase;
-    width: 320px;
-
-    i {
-      margin-right: 10px;
-      color: $color-tertiary;
-    }
-  }
-
-  &__design {
-    border: none;
-    border-bottom: 1px solid $white-two;
-    legend {
-      font-size: 14px;
-      font-family: $primary-font;
-      color: $color-dark;
-      text-transform: uppercase;
-      margin-top: 22px;
-      min-width: 320px;
-      max-width: 600px;
-    }
-
-    .palette-1 {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 20px;
-
-      input {
-        width: 17px;
-        height: 17px;
-      }
-      .color-cold-1 {
-        @include color-container-mobile;
-        background-color: $color-primary;
-        margin-left: 10px;
-      }
-      .color-cold-2 {
-        @include color-container-mobile;
-        background-color: $color-secondary;
-      }
-      .color-cold-3 {
-        @include color-container-mobile;
-        background-color: $hospital-green;
-      }
-    }
-    .palette-2 {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 20px;
-
-      input {
-        width: 17px;
-        height: 17px;
-        padding-right: 10px;
-      }
-      .color-warm-1 {
-        @include color-container-mobile;
-        background-color: $dried-blood;
-        margin-left: 10px;
-      }
-      .color-warm-2 {
-        @include color-container-mobile;
-        background-color: $rusty-red;
-      }
-      .color-warm-3 {
-        @include color-container-mobile;
-        background-color: $tomato;
-      }
-    }
-    .palette-3 {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 20px;
-
-      input {
-        width: 17px;
-        height: 17px;
-        padding-right: 10px;
-      }
-      .color-neutral-1 {
-        @include color-container-mobile;
-        background-color: $slate;
-        margin-left: 10px;
-      }
-      .color-neutral-2 {
-        @include color-container-mobile;
-        background-color: $faded-orange;
-      }
-      .color-neutral-3 {
-        @include color-container-mobile;
-        background-color: $light-grey-blue;
-      }
-    }
-  }
-
-  &__fill {
-    border: none;
-    border-bottom: 1px solid $white-two;
-    padding-bottom: 10px;
-    h2 {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    label {
-      font-size: 14px;
-      font-family: $primary-font;
-      color: $color-base;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      display: block;
-    }
-    input {
-      border: solid 1px $hospital-green;
-      width: 100%;
-      font-size: 14px;
-      font-family: $primary-font;
-      line-height: 30px;
-    }
-    input::placeholder {
-      color: $pinkish-grey;
-      padding-left: 9px;
-    }
-    .button__container {
-      display: flex;
-      .button__image {
+    .form__title {
         display: flex;
-        width: 140px;
-        height: 30px;
-        background-color: $color-tertiary;
-        border-radius: 3px;
-        font-size: 14px;
-        font-family: $primary-font;
-        color: $color-light;
-        border: none;
-        align-items: center;
-        justify-content: center;
-      }
-      .image__box {
-        width: 30px;
-        height: 30px;
-        margin-left: 20px;
-        border: 1px solid $hospital-green;
-      }
+        justify-content: space-between;
+        width: 100%;
     }
-  }
-  &__share {
-    border: none;
-    border-bottom: 1px solid $white-two;
-    padding: 5.6px 12px 10px;
 
-    .twitter {
-      padding-top: 20px;
-      border-top: 1px solid $white-two;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .twitter-paragraph {
+    .h2 {
         font-size: 18px;
-        font-weight: 400;
         font-family: $primary-font;
+        font-weight: 400;
         color: $color-dark;
-        margin-bottom: 5px;
-      }
-      .twitter-url {
-        font-size: 12px;
-        font-weight: 400;
-        font-family: $primary-font;
-        color: $color-tertiary;
-        margin-bottom: 13px;
-        text-align: center;
-      }
-      .twitter-button {
-        background-color: $azure;
-        color: $color-light;
-        width: 181px;
-        height: 30px;
-        font-size: 14px;
-        font-family: $primary-font;
-        margin-bottom: 30px;
-        border: inherit;
-        border-radius: 3px;
-        padding: 6px;
-        text-align: center;
-      }
+        text-transform: uppercase;
+        width: 320px;
+
+        i {
+            margin-right: 10px;
+            color: $color-tertiary;
+        }
     }
 
-    h2 {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .button__share {
-      width: 199px;
-      height: 50px;
-      margin: 30px;
-      margin-left: 25%;
-      background-color: $color-tertiary;
-      border-radius: 12px;
-      font-size: 14px;
-      font-family: $primary-font;
-      color: $color-light;
-      text-transform: uppercase;
-      text-align: center;
-      border: none;
-      cursor: pointer;
+    &__design {
+        border: none;
+        border-bottom: 1px solid $white-two;
+        legend {
+            font-size: 14px;
+            font-family: $primary-font;
+            color: $color-dark;
+            text-transform: uppercase;
+            margin-top: 22px;
+            min-width: 320px;
+            max-width: 600px;
+        }
 
-      .fa-address-card {
-        margin-right: 5px;
-      }
+        .palette-1 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
 
-      a {
-        padding-left: 9px;
-      }
+            input {
+                width: 17px;
+                height: 17px;
+            }
+            .color-cold-1 {
+                @include color-container-mobile;
+                background-color: $color-primary;
+                margin-left: 10px;
+            }
+            .color-cold-2 {
+                @include color-container-mobile;
+                background-color: $color-secondary;
+            }
+            .color-cold-3 {
+                @include color-container-mobile;
+                background-color: $hospital-green;
+            }
+        }
+        .palette-2 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            input {
+                width: 17px;
+                height: 17px;
+                padding-right: 10px;
+            }
+            .color-warm-1 {
+                @include color-container-mobile;
+                background-color: $dried-blood;
+                margin-left: 10px;
+            }
+            .color-warm-2 {
+                @include color-container-mobile;
+                background-color: $rusty-red;
+            }
+            .color-warm-3 {
+                @include color-container-mobile;
+                background-color: $tomato;
+            }
+        }
+        .palette-3 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            input {
+                width: 17px;
+                height: 17px;
+                padding-right: 10px;
+            }
+            .color-neutral-1 {
+                @include color-container-mobile;
+                background-color: $slate;
+                margin-left: 10px;
+            }
+            .color-neutral-2 {
+                @include color-container-mobile;
+                background-color: $faded-orange;
+            }
+            .color-neutral-3 {
+                @include color-container-mobile;
+                background-color: $light-grey-blue;
+            }
+        }
     }
-  }
+
+    &__fill {
+        border: none;
+        border-bottom: 1px solid $white-two;
+        padding-bottom: 10px;
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        label {
+            font-size: 14px;
+            font-family: $primary-font;
+            color: $color-base;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input {
+            border: solid 1px $hospital-green;
+            width: 100%;
+            font-size: 14px;
+            font-family: $primary-font;
+            line-height: 30px;
+        }
+        input::placeholder {
+            color: $pinkish-grey;
+            padding-left: 9px;
+        }
+        .button__container {
+            display: flex;
+            .button__image {
+                display: flex;
+                width: 140px;
+                height: 30px;
+                background-color: $color-tertiary;
+                border-radius: 3px;
+                font-size: 14px;
+                font-family: $primary-font;
+                color: $color-light;
+                border: none;
+                align-items: center;
+                justify-content: center;
+            }
+            .image__box {
+                width: 30px;
+                height: 30px;
+                margin-left: 20px;
+                border: 1px solid $hospital-green;
+            }
+        }
+    }
+    &__share {
+        border: none;
+        border-bottom: 1px solid $white-two;
+        padding: 5.6px 12px 10px;
+
+        .twitter {
+            padding-top: 20px;
+            border-top: 1px solid $white-two;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .twitter-paragraph {
+                font-size: 18px;
+                font-weight: 400;
+                font-family: $primary-font;
+                color: $color-dark;
+                margin-bottom: 5px;
+            }
+            .twitter-url {
+                font-size: 12px;
+                font-weight: 400;
+                font-family: $primary-font;
+                color: $color-tertiary;
+                margin-bottom: 13px;
+                text-align: center;
+            }
+            .twitter-button {
+                background-color: $azure;
+                color: $color-light;
+                width: 181px;
+                height: 30px;
+                font-size: 14px;
+                font-family: $primary-font;
+                margin-bottom: 30px;
+                border: inherit;
+                border-radius: 3px;
+                padding: 6px;
+                text-align: center;
+            }
+        }
+
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .button__share {
+            width: 199px;
+            height: 50px;
+            margin: 30px;
+            margin-left: 25%;
+            background-color: $color-tertiary;
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: $primary-font;
+            color: $color-light;
+            text-transform: uppercase;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+
+            .fa-address-card {
+                margin-right: 5px;
+            }
+
+            a {
+                padding-left: 9px;
+            }
+        }
+    }
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
