@@ -262,9 +262,7 @@
         border-radius: 3px;
       }
     }
-    .hidden {
-      display: none;
-    }
+
     h2 {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -328,4 +326,8 @@
       margin-top: 12px;
     }
   }
+}
+
+.hidden {
+  display: none;
 }

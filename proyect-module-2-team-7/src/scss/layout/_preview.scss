@@ -77,12 +77,12 @@
 }
 
 .card__photo2 {
-    width: 100%;
-    height: 200px;
-    background-image: url('../images/p3.jpg');
-    background-size: cover;
-    background-position: center;
-    border: 1px solid $tomato;
+  width: 100%;
+  height: 200px;
+  background-image: url('../images/p3.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid $tomato;
 }
 
 .card__photo3 {
@@ -125,6 +125,23 @@
   padding: 0px 20px;
   margin-bottom: 10px;
 }
+/* 
+.card__id2 {
+  .card__id_name {
+    color: YYY
+  }
+  .card__id {
+    border-left-color: XXX;
+  }
+}
+.card__id3 {
+  .card__id_name {
+    color: YYY
+  }
+  .card__id {
+    border-left-color: XXX;
+  }
+} */
 
 a {
   text-decoration: none;
