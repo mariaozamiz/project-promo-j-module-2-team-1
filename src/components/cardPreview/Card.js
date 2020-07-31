@@ -2,7 +2,6 @@ import React from 'react';
 import ListIcons from './ListIcons';
 
 function Card(props) {
-  console.log(props);
   return (
     <div className={`card card_id${props.data.palette}`}>
       <div className='card__id'>
