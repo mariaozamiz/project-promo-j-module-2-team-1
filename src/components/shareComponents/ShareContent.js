@@ -1,4 +1,5 @@
 import React from "react";
+import "../../stylesheets/layout/shareContent/share.scss";
 
 function ShareContent(props) {
   const renderButton = () => {
@@ -21,10 +22,11 @@ function ShareContent(props) {
   const renderUrl = () => {
     return (
       <p className="twitter-url result-url">
-        {/* <a
+        <a
           className="twitter-share-button"
           href="https://twitter.com/intent/tweet"
-        ></a> ---- esto debería crearse por javascript con enlace a la card, sin twitter*/}
+        ></a>
+        {/* esto debería crearse por javascript con enlace a la card, sin twitter */}
       </p>
     );
   };
@@ -32,7 +34,7 @@ function ShareContent(props) {
   const renderTwitterButton = () => {
     return (
       <div className="js-twitter-button twitter-button">
-        <a className="twitter-link" href="">
+        <a href="">
           {" "}
           {/*agregar aquí href con enlace a twitter y la url*/}
           <i className="fab fa-twitter"></i>Compartir en twitter

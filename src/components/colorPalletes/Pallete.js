@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Pallete(props) {
   const getPalleteValue = (ev) => {
@@ -18,12 +18,12 @@ function Pallete(props) {
       >
         <input
           id={`palette-${props.number}`}
-          type='radio'
+          type="radio"
           value={props.number}
-          checked=''
+          checked=""
           onChange={getPalleteValue}
-          name='palette'
-          className='js-palette' //estas clases nos las tenemos que cargar, dice Miguel
+          name="palette"
+          className="js-palette" //estas clases nos las tenemos que cargar, dice Miguel
         />
         <div className={props.colors[0]}></div>
         <div className={props.colors[1]}></div>
