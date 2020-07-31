@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import Header from './HeaderFooter/Header';
-import headerLogo from '../images/tarjetas-molonas.png';
-import Collapsible from './Collapsible';
-import Preview from './cardPreview/Preview';
-import Palletes from './colorPalletes/Palletes.js';
-import Fill from './FillComponents/Fill';
-import ShareContent from './shareComponents/ShareContent';
-import Footer from './HeaderFooter/Footer';
+import React, { useState } from "react";
+import Header from "./HeaderFooter/Header";
+import headerLogo from "../images/tarjetas-molonas.png";
+import Collapsible from "./Collapsible";
+import Preview from "./cardPreview/Preview";
+import Palletes from "./colorPalletes/Palletes.js";
+import Fill from "./FillComponents/Fill";
+import ShareContent from "./shareComponents/ShareContent";
+import Footer from "./HeaderFooter/Footer";
+import "../stylesheets/pages/design.scss";
 
 let userData = {};
 
@@ -39,24 +40,24 @@ function Design() {
   return (
     <div>
       <Header />
-      <main className='design__container'>
-        <section className='preview'>
+      <main className="design__container">
+        <section className="preview">
           <Preview data={data} reset={resetUserData} />
         </section>
-        <section className='customizer'>
-          <div className='customizer__wrapper'>
-            <form className='form'>
-              <fieldset className='form__design collapsable--open'>
-                <Collapsible name='Diseña' icon='far fa-object-ungroup' />
+        <section className="customizer">
+          <div className="customizer__wrapper">
+            <form className="form">
+              <fieldset className="form__design collapsable--open">
+                <Collapsible name="Diseña" icon="far fa-object-ungroup" />
                 <Palletes inputValue={handleInputsValue} />
               </fieldset>
-              <fieldset className='form__fill collapsable--open'>
-                <Collapsible name='Rellena' icon='far fa-keyboard' />
+              <fieldset className="form__fill collapsable--open">
+                <Collapsible name="Rellena" icon="far fa-keyboard" />
                 <Fill inputValue={handleInputsValue} data={data} />
               </fieldset>
 
-              <fieldset className='form__share collapsable--open'>
-                <Collapsible name='Comparte' icon='fas fa-share-alt' />
+              <fieldset className="form__share collapsable--open">
+                <Collapsible name="Comparte" icon="fas fa-share-alt" />
                 <ShareContent />
               </fieldset>
             </form>
