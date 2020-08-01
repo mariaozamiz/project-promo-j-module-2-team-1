@@ -1,5 +1,7 @@
 import React from 'react';
 import headerLogo from '../../images/tarjetas-molonas.png';
+import '../stylesheets/layout/_header.scss';
+
 function Header() {
   return (
     <header className='header_design'>

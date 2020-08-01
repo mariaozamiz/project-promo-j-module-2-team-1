@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 function ShareContent(props) {
   const renderButton = () => {
     return (
-      <button type="submit" className="button__share js-button__share">
-        <i className="far fa-address-card"></i>
+      <button type='submit' className='button__share js-button__share'>
+        <i className='far fa-address-card'></i>
         Crear tarjeta
       </button>
     );
@@ -12,7 +12,7 @@ function ShareContent(props) {
 
   const renderSentence = () => {
     return (
-      <p className="js-twiter-paragraph twitter-paragraph">
+      <p className='js-twiter-paragraph twitter-paragraph'>
         ¡Mira mi tarjeta de visita de AdaVillana!
       </p>
     );
@@ -20,7 +20,7 @@ function ShareContent(props) {
 
   const renderUrl = () => {
     return (
-      <p className="twitter-url result-url">
+      <p className='twitter-url result-url'>
         {/* <a
           className="twitter-share-button"
           href="https://twitter.com/intent/tweet"
@@ -31,12 +31,12 @@ function ShareContent(props) {
 
   const renderTwitterButton = () => {
     return (
-      <div className="js-twitter-button twitter-button">
-        <a className="twitter-link" href="">
-          {" "}
+      <div className='js-twitter-button twitter-button'>
+        <a className='twitter-link' href=''>
+          {' '}
           {/*agregar aquí href con enlace a twitter y la url*/}
           <span>
-            <i className="fab fa-twitter"></i>Compartir en twitter
+            <i className='fab fa-twitter'></i>Compartir en twitter
           </span>
         </a>
       </div>
@@ -45,8 +45,8 @@ function ShareContent(props) {
 
   return (
     <>
-      <div className="collapsible__content">{renderButton()}</div>
-      <div className="js-twitter twitter">
+      <div className='collapsible__content'>{renderButton()}</div>
+      <div className='js-twitter twitter'>
         {renderSentence()}
         {renderUrl()}
         {renderTwitterButton()}
