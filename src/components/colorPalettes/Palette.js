@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Pallete(props) {
+function Palette(props) {
+    const renderPaletteDivs = () => {
+        return props.colors.map((color, index) => {
+            return <div key={index} className={color}></div>;
+        });
+    };
+
     return (
         <>
             <label
@@ -11,20 +17,15 @@ function Pallete(props) {
                     id={`palette-${props.number}`}
                     type="radio"
                     value={props.number}
-                    checked=""
-                    name="color-palettes"
+                    defaultChecked={props.checked}
+                    onChange={props.changeHandler}
+                    name="palette"
                     className="js-palette" //estas clases nos las tenemos que cargar, dice Miguel
                 />
-                <div className={props.colors[0]}></div>
-                <div className={props.colors[1]}></div>
-                <div className={props.colors[2]}></div>
+                {renderPaletteDivs(props)}
             </label>
         </>
     );
 }
 
-export default Pallete;
-
-// EmailItem.defaultProps = {
-//   from: 'Remitente desconocido'
-// };
+export default Palette;

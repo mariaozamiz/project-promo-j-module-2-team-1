@@ -3,7 +3,7 @@ import Header from './HeaderFooter/Header';
 import headerLogo from '../images/tarjetas-molonas.png';
 import Collapsible from './Collapsible';
 import Preview from './cardPreview/Preview';
-import Palletes from './colorPalletes/Palletes.js';
+import Palettes from './colorPalettes/Palettes.js';
 import Fill from './FillComponents/Fill';
 import ShareContent from './shareComponents/ShareContent';
 import Footer from './HeaderFooter/Footer';
@@ -16,7 +16,7 @@ let userData = {
     linkedin: 'lamari',
     github: 'lamari',
     photo: '',
-    palette: '2',
+    palette: 1,
 };
 
 function Design() {
@@ -53,7 +53,10 @@ function Design() {
                                     name="Diseña"
                                     icon="far fa-object-ungroup"
                                 />
-                                <Palletes />
+                                <Palettes
+                                    changeHandler={handleInputsValue}
+                                    selectedPalette={data.palette}
+                                />
                             </fieldset>
                             <fieldset className="form__fill collapsable--open">
                                 <Collapsible
