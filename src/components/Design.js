@@ -68,7 +68,7 @@ function Design() {
                 icon="fas fa-share-alt"
                 iconCollapse="fas fa-chevron-down"
               />
-              <ShareContent />
+              <ShareContent iconTwitter="fab fa-twitter" />
             </fieldset>
           </form>
         </section>
