@@ -1,29 +1,49 @@
 @import "../core/mixins";
 @import "../core/variables";
 
-.form {
-  width: 100%;
-  .form__title {
+// viene de _page.scss --> no sirve allí, creo que esto debería ir aquí
+body {
+  height: 100vh;
+  background-color: $unknown-color;
+}
+.wrapper {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+@media all and (min-width: 768px) {
+  .design__container {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .h2 {
-    font-size: 18px;
-    font-family: $primary-font;
-    font-weight: 400;
-    color: $color-dark;
-    text-transform: uppercase;
-    width: 320px;
-
-    i {
-      margin-right: 10px;
-      color: $color-tertiary;
-    }
+    flex-direction: row-reverse;
+    padding: 20px 40px;
   }
 }
 
+// clase hiden, lo podemos utilizar desde aquí o en colapsables o meterlo en los parciales de sass donde lo usemos.
 .hidden {
   display: none;
 }
+
+// parte global del form, lo tenemos en cada uno de los componentes
+// .form {
+//   width: 100%;
+//   .form__title {
+//     display: flex;
+//     justify-content: space-between;
+//     width: 100%;
+//   }
+
+//   .h2 {
+//     font-size: 18px;
+//     font-family: $primary-font;
+//     font-weight: 400;
+//     color: $color-dark;
+//     text-transform: uppercase;
+//     width: 320px;
+
+//     i {
+//       margin-right: 10px;
+//       color: $color-tertiary;
+//     }
+//   }
+// }

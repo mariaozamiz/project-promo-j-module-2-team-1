@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Header from "./HeaderFooter/Header";
-import headerLogo from "../images/tarjetas-molonas.png";
 import Collapsible from "./Collapsible";
 import Preview from "./cardPreview/Preview";
 import Palletes from "./colorPalletes/Palletes.js";
 import Fill from "./FillComponents/Fill";
 import ShareContent from "./shareComponents/ShareContent";
 import Footer from "./HeaderFooter/Footer";
+
+// sass
 import "../stylesheets/pages/design.scss";
 
 let userData = {};

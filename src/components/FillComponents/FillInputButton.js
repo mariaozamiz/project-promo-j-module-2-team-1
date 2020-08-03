@@ -2,12 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import ProfileButton from "./ProfileButton";
 import InputButton from "./InputButton";
+import "../../stylesheets/layout/fill/fill_imput_button.scss";
 
 function FillInputButton(props) {
   const fr = new FileReader();
   const myFileField = React.createRef();
 
   const { isAvatarDefault, avatar } = props;
+
+  console.log(props);
 
   const handleFilePicker = () => {
     myFileField.current.click();

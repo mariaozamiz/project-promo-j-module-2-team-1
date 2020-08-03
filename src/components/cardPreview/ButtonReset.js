@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import "../../stylesheets/layout/cardPreview/buttonReset.scss";
 
 function ButtonReset(props) {
   const resetData = (ev) => {
@@ -7,11 +8,11 @@ function ButtonReset(props) {
 
   return (
     <button
-      id='button-reset'
-      className='button-reset js-button-reset'
+      id="button-reset"
+      className="button-reset js-button-reset"
       onClick={resetData}
     >
-      <i className='far fa-trash-alt' aria-hidden='true'></i> reset
+      <i className="far fa-trash-alt" aria-hidden="true"></i> reset
     </button>
   );
 }

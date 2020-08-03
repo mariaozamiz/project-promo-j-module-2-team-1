@@ -1,10 +1,11 @@
-import React from 'react';
-import Pallete from './Pallete';
+import React from "react";
+import Pallete from "./Pallete";
+import "../../stylesheets/layout/colorPalletes/colorPalletes.scss";
 
 const colorPalletes = [
-  ['color-cold-1', 'color-cold-2', 'color-cold-3'],
-  ['color-warm-1', 'color-warm-2', 'color-warm-3'],
-  ['color-neutral-1', 'color-neutral-2', 'color-neutral-3'],
+  ["color-cold-1", "color-cold-2", "color-cold-3"],
+  ["color-warm-1", "color-warm-2", "color-warm-3"],
+  ["color-neutral-1", "color-neutral-2", "color-neutral-3"],
 ];
 
 function Palletes(props) {
@@ -23,7 +24,7 @@ function Palletes(props) {
 
   return (
     <>
-      <div className='collapsible__content'>
+      <div className="collapsible__content">
         <legend>Colores</legend>
         {renderPalletes()}
       </div>
