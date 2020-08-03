@@ -1,3 +1,5 @@
+@import '../../core/variables';
+
 a {
   text-decoration: none;
 }
@@ -11,8 +13,6 @@ a {
     @media all and (min-width: 768px) {
       padding-top: 31px;
       padding-bottom: 59px;
-      padding-left: 175px;
-      padding-right: 175px;
       // añadir padding left y right en la rama main del wrapper y quitar de aquí
     }
     & h1 {
@@ -84,6 +84,26 @@ a {
         font-weight: 400;
         margin: 0;
       }
+    }
+  }
+}
+
+.header {
+  .wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+  }
+  .header__photo {
+    width: 420px;
+    height: 105px;
+
+    @media all and (min-width: 768px) {
+      width: 420px;
+      height: 105px;
     }
   }
 }

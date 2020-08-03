@@ -1,47 +1,50 @@
 import React from 'react';
+import "../stylesheets/layout/landing/main.scss";
+import headerLogo from "../images/tarjetas-molonas.png";
+import { Link } from 'react-router-dom';
 
 const Landing = (props) => {
   return (
     <div>
-      <header class='header'>
-        <div class='wrapper'>
+      <header className='header'>
+        <div className='wrapper'>
           <img
-            class='header__photo'
-            src='./assets/images/tarjetas-molonas.png'
+            className='header__photo'
+            src={headerLogo}
           />
         </div>
       </header>
 
-      <main class='main'>
-        <div class='wrapper'>
+      <main className='main'>
+        <div className='wrapper'>
           <h1>Crea tu tarjeta de visita</h1>
           <p>Crea mejores contactos profesionales de forma fácil y cómoda</p>
-          <section class='options'>
+          <section className='options'>
             <article>
-              <i class='far fa-object-ungroup'></i>
+              <i className='far fa-object-ungroup'></i>
               <p>Diseña</p>
             </article>
             <article>
-              <i class='far fa-keyboard'></i>
+              <i className='far fa-keyboard'></i>
               <p>Rellena</p>
             </article>
             <article>
-              <i class='fas fa-share-alt'></i>
+              <i className='fas fa-share-alt'></i>
               <p>Comparte</p>
             </article>
           </section>
-          <div class='button__start'>
-            <a href='./design.html' class='button__start--text'>
+          <div className='button__start'>
+            <Link href='./design.html' className='button__start--text'>
               comenzar
-            </a>
+            </Link>
           </div>
         </div>
       </main>
-      <footer class='footer'>
-        <div class='wrapper'>
-          <span class='copyright'>Awesome profile-cards @2018</span>
+      <footer className='footer'>
+        <div className='wrapper'>
+          <span className='copyright'>Awesome profile-cards @2018</span>
           <img
-            class='logo-adalab'
+            className='logo-adalab'
             src='././assets/images/logo-adalab.png'
             rel='logo-adalab'
           />

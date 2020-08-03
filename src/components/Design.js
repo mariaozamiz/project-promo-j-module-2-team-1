@@ -9,6 +9,8 @@ import Footer from "./HeaderFooter/Footer";
 
 // sass
 import "../stylesheets/pages/design.scss";
+import Landing from './Landing';
+import { Route, Switch } from 'react-router-dom';
 
 let userData = {};
 
@@ -40,6 +42,7 @@ function Design() {
 
   return (
     <div>
+      <Landing />
       <Header />
       <main className="design__container">
         <section className="preview">
