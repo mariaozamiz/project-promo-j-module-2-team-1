@@ -16,7 +16,7 @@ function Design() {
   const [data, setData] = useState(userData);
 
   const handleInputsValue = (inputInfo) => {
-    console.log(inputInfo);
+    // console.log(inputInfo);
     setData({
       /* name: data.name,
       job: data.job,
@@ -36,33 +36,41 @@ function Design() {
   /*const handlePalleteValue = (ev) => {
     console.log('paleta', ev);
   };*/
-  console.log(userData, data, userData === data);
+  // console.log(userData, data, userData === data);
 
   return (
     <div>
       <Header />
       <main className="design__container">
-        <section className="preview">
-          <Preview data={data} reset={resetUserData} />
-        </section>
-        <section className="customizer">
-          <div className="customizer__wrapper">
-            <form className="form">
-              <fieldset className="form__design collapsable--open">
-                <Collapsible name="Diseña" icon="far fa-object-ungroup" />
-                <Palletes inputValue={handleInputsValue} />
-              </fieldset>
-              <fieldset className="form__fill collapsable--open">
-                <Collapsible name="Rellena" icon="far fa-keyboard" />
-                <Fill inputValue={handleInputsValue} data={data} />
-              </fieldset>
+        <Preview data={data} reset={resetUserData} />
+        <section>
+          <form className="form">
+            <fieldset className="form__design collapsable--open">
+              <Collapsible
+                name="Diseña"
+                icon="far fa-object-ungroup"
+                iconCollapse="fas fa-chevron-down"
+              />
+              <Palletes inputValue={handleInputsValue} />
+            </fieldset>
+            <fieldset className="form__fill collapsable--open">
+              <Collapsible
+                name="Rellena"
+                icon="far fa-keyboard"
+                iconCollapse="fas fa-chevron-down"
+              />
+              <Fill inputValue={handleInputsValue} data={data} />
+            </fieldset>
 
-              <fieldset className="form__share collapsable--open">
-                <Collapsible name="Comparte" icon="fas fa-share-alt" />
-                <ShareContent />
-              </fieldset>
-            </form>
-          </div>
+            <fieldset className="form__share collapsable--open">
+              <Collapsible
+                name="Comparte"
+                icon="fas fa-share-alt"
+                iconCollapse="fas fa-chevron-down"
+              />
+              <ShareContent />
+            </fieldset>
+          </form>
         </section>
       </main>
       <Footer />
