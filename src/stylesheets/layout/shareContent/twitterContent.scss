@@ -1,0 +1,44 @@
+@import "../../core/variables";
+
+.twitter {
+  padding-top: 20px;
+  border-top: 1px solid $white-two;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .twitter-paragraph {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $primary-font;
+    color: $color-dark;
+    margin-bottom: 5px;
+  }
+
+  .twitter-url {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: $primary-font;
+    color: $color-tertiary;
+    margin: 15px 0;
+    text-align: center;
+  }
+  .twitter-button {
+    background-color: $azure;
+    color: $color-light;
+    width: 181px;
+    height: 30px;
+    font-size: 14px;
+    font-family: $primary-font;
+    margin-bottom: 30px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 3px;
+    padding: 6px;
+    text-align: center;
+
+    a {
+      padding: 10px;
+    }
+  }
+}

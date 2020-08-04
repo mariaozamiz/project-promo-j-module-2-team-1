@@ -1,98 +1,12 @@
 @import "../../core/variables";
 
 .form {
-  width: 100%;
-  .form__title {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .h2 {
-    font-size: 18px;
-    font-family: $primary-font;
-    font-weight: 400;
-    color: $color-dark;
-    text-transform: uppercase;
-    width: 320px;
-
-    i {
-      margin-right: 10px;
-      color: $color-tertiary;
-    }
-  }
-
+  margin: 10px 20px;
   &__share {
-    border: none;
     border-bottom: 1px solid $white-two;
-    padding: 5.6px 12px 10px;
-
-    .twitter {
-      padding-top: 20px;
-      border-top: 1px solid $white-two;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .twitter-paragraph {
-        font-size: 18px;
-        font-weight: 400;
-        font-family: $primary-font;
-        color: $color-dark;
-        margin-bottom: 5px;
-      }
-      .twitter-url {
-        font-size: 12px;
-        font-weight: 400;
-        font-family: $primary-font;
-        color: $color-tertiary;
-        margin-bottom: 13px;
-        text-align: center;
-      }
-      .twitter-button {
-        background-color: $azure;
-        color: $color-light;
-        width: 181px;
-        height: 30px;
-        font-size: 14px;
-        font-family: $primary-font;
-        margin-bottom: 30px;
-        border: inherit;
-        border-radius: 3px;
-        padding: 6px;
-        text-align: center;
-        a {
-          color: $color-light;
-        }
-      }
-    }
 
     h2 {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    .button__share {
-      width: 199px;
-      height: 50px;
-      margin: 30px;
-      margin-left: 25%;
-      background-color: $color-tertiary;
-      border-radius: 12px;
-      font-size: 14px;
-      font-family: $primary-font;
-      color: $color-light;
-      text-transform: uppercase;
-      text-align: center;
-      border: none;
-      cursor: pointer;
-
-      .fa-address-card {
-        margin-right: 5px;
-      }
-
-      a {
-        padding-left: 9px;
-      }
+      padding: 10px 0;
     }
   }
 }
