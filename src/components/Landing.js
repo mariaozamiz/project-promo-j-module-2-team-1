@@ -34,7 +34,7 @@ const Landing = (props) => {
             </article>
           </section>
           <div className='button__start'>
-            <Link href='./design.html' className='button__start--text'>
+            <Link to='/design' className='button__start--text'>
               comenzar
             </Link>
           </div>
