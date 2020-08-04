@@ -22,10 +22,12 @@ let userData = {
 function Design() {
     const [data, setData] = useState(userData);
 
+    const handleInputs = (data) => {};
+
     const handleInputsValue = (ev) => {
         const value = ev.target.value;
         const attr = ev.target.name;
-        data[attr] = value;
+        // data[attr] = value;
         setData({
             /* name: data.name,
       job: data.job,
@@ -37,7 +39,7 @@ function Design() {
             [attr]: value,
         });
     };
-    console.log(data);
+    console.log(data.palette);
     return (
         <div>
             <Header />

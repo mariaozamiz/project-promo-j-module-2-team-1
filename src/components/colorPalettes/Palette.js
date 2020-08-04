@@ -7,6 +7,13 @@ function Palette(props) {
         });
     };
 
+    /*const changeHandler = (ev) => {
+        props.changeHandler({
+            attr: 'palette',
+            value: parseInt(ev.target.value),
+        });
+    };*/
+
     return (
         <>
             <label
