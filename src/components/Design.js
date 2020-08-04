@@ -10,7 +10,9 @@ import Footer from './HeaderFooter/Footer';
 // sass
 import '../stylesheets/pages/design.scss';
 
-let userData = {};
+let userData = {
+  pallete: 2,
+};
 
 function Design() {
   const [data, setData] = useState(userData);
@@ -41,34 +43,34 @@ function Design() {
   return (
     <div>
       <Header />
-      <main className="design__container">
+      <main className='design__container'>
         <Preview data={data} reset={resetUserData} />
         <section>
-          <form className="form">
-            <fieldset className="form__design collapsable--open">
+          <form className='form'>
+            <fieldset className='form__design collapsable--open'>
               <Collapsible
-                name="Diseña"
-                icon="far fa-object-ungroup"
-                iconCollapse="fas fa-chevron-down"
+                name='Diseña'
+                icon='far fa-object-ungroup'
+                iconCollapse='fas fa-chevron-down'
               />
               <Palletes inputValue={handleInputsValue} />
             </fieldset>
-            <fieldset className="form__fill collapsable--open">
+            <fieldset className='form__fill collapsable--open'>
               <Collapsible
-                name="Rellena"
-                icon="far fa-keyboard"
-                iconCollapse="fas fa-chevron-down"
+                name='Rellena'
+                icon='far fa-keyboard'
+                iconCollapse='fas fa-chevron-down'
               />
               <Fill inputValue={handleInputsValue} data={data} />
             </fieldset>
 
-            <fieldset className="form__share collapsable--open">
+            <fieldset className='form__share collapsable--open'>
               <Collapsible
-                name="Comparte"
-                icon="fas fa-share-alt"
-                iconCollapse="fas fa-chevron-down"
+                name='Comparte'
+                icon='fas fa-share-alt'
+                iconCollapse='fas fa-chevron-down'
               />
-              <ShareContent iconTwitter="fab fa-twitter" />
+              <ShareContent iconTwitter='fab fa-twitter' />
             </fieldset>
           </form>
         </section>
