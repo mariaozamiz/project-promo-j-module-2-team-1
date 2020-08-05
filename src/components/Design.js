@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
-import Header from './HeaderFooter/Header';
-import Collapsible from './Collapsible';
-import Preview from './cardPreview/Preview';
-import Palletes from './colorPalletes/Palletes.js';
-import Fill from './FillComponents/Fill';
-import ShareContent from './shareComponents/ShareContent';
-import Footer from './HeaderFooter/Footer';
+import React, { useState, useEffect } from "react";
+import Header from "./HeaderFooter/Header";
+import Collapsible from "./Collapsible";
+import Preview from "./cardPreview/Preview";
+import Palletes from "./colorPalletes/Palletes.js";
+import Fill from "./FillComponents/Fill";
+import ShareContent from "./shareComponents/ShareContent";
+import Footer from "./HeaderFooter/Footer";
 
 // sass
-import '../stylesheets/pages/design.scss';
+import "../stylesheets/pages/design.scss";
 
 let userData = {
   pallete: 2,
 };
 
 function Design() {
-  const [data, setData] = useState(userData);
+  const [data, setData] = useState(
+    JSON.parse(localStorage.getItem("myValueLocalStorage")) || userData
+  );
+  //const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    //setLoading(true);
+    localStorage.setItem("myValueLocalStorage", JSON.stringify(data));
+    //setLoading(false);
+  });
 
   const handleInputsValue = (inputInfo) => {
     // console.log(inputInfo);
+
     setData({
       /* name: data.name,
       job: data.job,
@@ -32,7 +42,7 @@ function Design() {
   };
 
   const resetUserData = () => {
-    setData({ ...userData });
+    setData({});
   };
 
   /*const handlePalleteValue = (ev) => {
@@ -62,6 +72,9 @@ function Design() {
                 iconCollapse='fas fa-chevron-down'
               />
               <Fill inputValue={handleInputsValue} data={data} />
+              {/* <p>
+                {loading === true ? "Cargando..." : "Mostrando tus datos..."}
+              </p> */}
             </fieldset>
 
             <fieldset className='form__share collapsable--open'>
