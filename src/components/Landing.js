@@ -1,17 +1,15 @@
 import React from 'react';
-import "../stylesheets/layout/landing/main.scss";
-import headerLogo from "../images/tarjetas-molonas.png";
+import '../stylesheets/layout/landing/main.scss';
+import headerLogo from '../images/tarjetas-molonas.png';
 import { Link } from 'react-router-dom';
+import Footer from "./HeaderFooter/Footer"
 
 const Landing = (props) => {
   return (
     <div>
       <header className='header'>
         <div className='wrapper'>
-          <img
-            className='header__photo'
-            src={headerLogo}
-          />
+          <img className='header__photo' src={headerLogo} />
         </div>
       </header>
 
@@ -40,16 +38,7 @@ const Landing = (props) => {
           </div>
         </div>
       </main>
-      <footer className='footer'>
-        <div className='wrapper'>
-          <span className='copyright'>Awesome profile-cards @2018</span>
-          <img
-            className='logo-adalab'
-            src='././assets/images/logo-adalab.png'
-            rel='logo-adalab'
-          />
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
