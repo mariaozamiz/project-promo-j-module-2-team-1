@@ -23,24 +23,28 @@ function Card(props) {
             icon="fas fa-mobile-alt"
             iconClass="telephone"
             link={`tel:+34${props.data.phone}`}
+            openOutside={props.openOutside}
           />
           <ListIcons
             colorPallete={props.data.pallete}
             icon="far fa-envelope"
             iconClass="email"
             link={`mailto: ${props.data.email}`}
+            openOutside={props.openOutside}
           />
           <ListIcons
             colorPallete={props.data.pallete}
             icon="fab fa-linkedin-in"
             iconClass="linkedin"
             link={`https://www.linkedin.com/in${props.data.linkedin}`}
+            openOutside={props.openOutside}
           />
           <ListIcons
             colorPallete={props.data.pallete}
             icon="fab fa-github-alt"
             iconClass="github"
             link={`https://github.com/${props.data.github}`}
+            openOutside={props.openOutside}
           />
         </ul>
       </div>
