@@ -1,8 +1,7 @@
-import React from "react";
-import ProfileButton from "./ProfileButton";
-import InputButton from "./InputButton";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-class FillInputButton extends React.Component {
+class FillInputButton extends Component {
   constructor(props) {
     super(props);
     this.fr = new FileReader();
@@ -13,7 +12,6 @@ class FillInputButton extends React.Component {
   }
 
   handleFilePicker() {
-    debugger;
     this.myFileField.current.click();
   }
 
@@ -34,7 +32,7 @@ class FillInputButton extends React.Component {
 
   render() {
     const { isAvatarDefault, avatar } = this.props;
-    //const { props } = this;
+    const { props } = this;
 
     return (
       <>
@@ -64,10 +62,10 @@ class FillInputButton extends React.Component {
   }
 }
 
-FillInputButton.propTypes = {
-  isAvatarDefault: PropTypes.bool.isRequired,
-  avatar: PropTypes.string.isRequired,
-  updateAvatar: PropTypes.func.isRequired,
-};
+// FillInputButton.propTypes = {
+//   isAvatarDefault: PropTypes.bool.isRequired,
+//   avatar: PropTypes.string.isRequired,
+//   updateAvatar: PropTypes.func.isRequired,
+// };
 
 export default FillInputButton;

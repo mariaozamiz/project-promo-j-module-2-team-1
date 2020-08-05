@@ -7,6 +7,7 @@ import Palettes from "./colorPalettes/Palettes.js";
 import Fill from "./FillComponents/Fill";
 import ShareContent from "./shareComponents/ShareContent";
 import Footer from "./HeaderFooter/Footer";
+import defaultImage from "./defaultImage";
 
 let userData = {
   name: "Mari Carmen",
@@ -21,6 +22,9 @@ let userData = {
 
 function Design() {
   const [data, setData] = useState(userData);
+  const [isAvatarDefault, setIsAvatarDefault] = useState(true);
+  const [profile, setProfile] = useState({ avatar: defaultImage });
+  // const []=
 
   const handleInputs = (data) => {};
 
@@ -39,6 +43,12 @@ function Design() {
       [info.attr]: info.value,
     });
   };
+  const updateAvatar = (img) => {
+    const newProfile = { ...profile, avatar: img };
+    setProfile(newProfile);
+    setIsAvatarDefault(false);
+  };
+
   console.log(data.palette);
   return (
     <div>
@@ -59,7 +69,12 @@ function Design() {
               </fieldset>
               <fieldset className="form__fill collapsable--open">
                 <Collapsible name="Rellena" icon="far fa-keyboard" />
-                <Fill handleInputsValue={handleInputsValue} />
+                <Fill
+                  handleInputsValue={handleInputsValue}
+                  avatar={profile.avatar}
+                  isAvatarDefault={isAvatarDefault}
+                  updateAvatar={updateAvatar}
+                />
               </fieldset>
 
               <fieldset className="form__share collapsable--open">

@@ -3,6 +3,7 @@ import FillInputs from "./FillInputs";
 import FillInputButton from "./FillInputButton";
 
 function Fill(props) {
+  console.log(props);
   return (
     <>
       <div className="collapsible__content">
@@ -29,6 +30,9 @@ function Fill(props) {
         <FillInputButton
           label="Imagen de perfil"
           className="action button__container"
+          avatar={props.avatar}
+          isAvatarDefault={props.isAvatarDefault}
+          updateAvatar={props.updateAvatar}
         />
 
         <FillInputs
