@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Palette(props) {
+    console.log(`el numero que viene por palletes es ${props.number}`);
     const renderPaletteDivs = () => {
         return props.colors.map((color, index) => {
             return <div key={index} className={color}></div>;
@@ -34,5 +36,9 @@ function Palette(props) {
         </>
     );
 }
+
+// Palette.propTypes = {
+//     value: PropTypes.number,
+// };
 
 export default Palette;
