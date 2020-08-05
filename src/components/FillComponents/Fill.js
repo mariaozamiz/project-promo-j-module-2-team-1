@@ -32,6 +32,9 @@ function Fill(props) {
         <FillInputButton
           label="Imagen de perfil"
           className="action button__container"
+          avatar={props.avatar}
+          isAvatarDefault={props.isAvatarDefault}
+          updateAvatar={props.updateAvatar}
         />
 
         <FillInputs

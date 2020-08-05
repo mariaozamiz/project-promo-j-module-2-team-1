@@ -3,7 +3,6 @@ import ListIcons from "./ListIcons";
 import "../../stylesheets/layout/cardPreview/card.scss";
 
 function Card(props) {
-  console.log(props.data.pallete);
   return (
     <div className={`card`}>
       <div className={`card__id${1}`}>
