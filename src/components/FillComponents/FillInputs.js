@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
 
-function FillInputs(props) {
-  const inputValue = (ev) => {
-    props.inputValue(ev);
+const FillInputs = (props) => {
+  const takeInputValues = (ev) => {
+    props.handleInputsValue({
+      value: ev.target.value,
+      attr: ev.target.name,
+    });
   };
 
   return (
@@ -14,9 +17,9 @@ function FillInputs(props) {
         id={props.id}
         type={props.type}
         name={props.name}
-        onKeyUp={inputValue}
+        onKeyUp={takeInputValues}
       />
     </>
   );
-}
+};
 export default FillInputs;
