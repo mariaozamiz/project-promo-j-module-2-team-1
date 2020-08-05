@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
-import Header from './HeaderFooter/Header';
-import Collapsible from './Collapsible';
-import Preview from './cardPreview/Preview';
-import Palletes from './colorPalletes/Palletes.js';
-import Fill from './FillComponents/Fill';
-import ShareContent from './shareComponents/ShareContent';
-import Footer from './HeaderFooter/Footer';
+import React, { useState } from "react";
+import Header from "./HeaderFooter/Header";
+import Collapsible from "./Collapsible";
+import Preview from "./cardPreview/Preview";
+import Palletes from "./colorPalletes/Palletes.js";
+import Fill from "./FillComponents/Fill";
+import ShareContent from "./shareComponents/ShareContent";
+import Footer from "./HeaderFooter/Footer";
 
 // sass
-import '../stylesheets/pages/design.scss';
+import "../stylesheets/pages/design.scss";
 
 let userData = {};
 
 function Design() {
   const [data, setData] = useState(userData);
+  const [collapseContentClassname, setCollapseContentClassname] = useState(
+    "collapsible__content hidden"
+  );
 
   const handleInputsValue = (inputInfo) => {
     // console.log(inputInfo);
@@ -38,6 +41,14 @@ function Design() {
   };*/
   // console.log(userData, data, userData === data);
 
+  const handleClickCollapsible = (props) => {
+    setCollapseContentClassname(
+      collapseContentClassname === "collapsible__content hidden"
+        ? "collapsible__content"
+        : "collapsible__content hidden"
+    );
+  };
+
   return (
     <div>
       <Header />
@@ -45,30 +56,26 @@ function Design() {
         <Preview data={data} reset={resetUserData} />
         <section>
           <form className="form">
-            <fieldset className="form__design collapsable--open">
-              <Collapsible
-                name="Diseña"
-                icon="far fa-object-ungroup"
-                iconCollapse="fas fa-chevron-down"
-              />
+            <fieldset className="form__design ">
+              <Collapsible name="Diseña" icon="far fa-object-ungroup" />
               <Palletes inputValue={handleInputsValue} />
             </fieldset>
-            <fieldset className="form__fill collapsable--open">
-              <Collapsible
-                name="Rellena"
-                icon="far fa-keyboard"
-                iconCollapse="fas fa-chevron-down"
-              />
+            <fieldset className="form__fill ">
+              <Collapsible name="Rellena" icon="far fa-keyboard" />
               <Fill inputValue={handleInputsValue} data={data} />
             </fieldset>
 
-            <fieldset className="form__share collapsable--open">
+            <fieldset className="form__share ">
               <Collapsible
+                handleClickCollapsible={handleClickCollapsible}
                 name="Comparte"
                 icon="fas fa-share-alt"
-                iconCollapse="fas fa-chevron-down"
               />
-              <ShareContent iconTwitter="fab fa-twitter" />
+              <ShareContent
+                handleClickCollapsible={handleClickCollapsible}
+                collapseContentClassname={collapseContentClassname}
+                iconTwitter="fab fa-twitter"
+              />
             </fieldset>
           </form>
         </section>
