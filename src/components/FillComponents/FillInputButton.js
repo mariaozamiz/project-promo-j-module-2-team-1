@@ -25,12 +25,12 @@ class FillInputButton extends Component {
     const image = this.fr.result;
     this.props.updateAvatar(image);
   }
-  getPreview(isDefault, image) {
-    return !isDefault ? { backgroundImage: `url(${image})` } : {};
+  getPreview(avatar) {
+    return { backgroundImage: `url(${avatar})` } || {};
   }
 
   render() {
-    const { isAvatarDefault, avatar } = this.props;
+    const { avatar } = this.props;
     const { props } = this;
 
     return (
@@ -52,7 +52,7 @@ class FillInputButton extends Component {
           />
           <div
             className="profile__preview js__profile-preview image__box"
-            style={this.getPreview(isAvatarDefault, avatar)}
+            style={this.getPreview(avatar)}
           ></div>
         </div>
       </>
@@ -61,8 +61,8 @@ class FillInputButton extends Component {
 }
 
 FillInputButton.propTypes = {
-  isAvatarDefault: PropTypes.bool.isRequired,
-  avatar: PropTypes.string.isRequired,
+  // isAvatarDefault: PropTypes.bool.isRequired,
+  // avatar: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func.isRequired,
 };
 

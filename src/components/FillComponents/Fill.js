@@ -16,6 +16,7 @@ function Fill(props) {
           type="text"
           value={props.data.name}
           inputValue={props.inputValue}
+          data={props.data}
         />
 
         <FillInputs
@@ -27,6 +28,7 @@ function Fill(props) {
           type="text"
           value={props.data.job}
           inputValue={props.inputValue}
+          data={props.data}
         />
 
         <FillInputButton
@@ -35,6 +37,7 @@ function Fill(props) {
           avatar={props.avatar}
           isAvatarDefault={props.isAvatarDefault}
           updateAvatar={props.updateAvatar}
+          data={props.data}
         />
 
         <FillInputs
@@ -46,17 +49,19 @@ function Fill(props) {
           name="email"
           value={props.data.email}
           inputValue={props.inputValue}
+          data={props.data}
         />
 
         <FillInputs
           label="Teléfono"
           className="js-input-telephone"
           placeholder="Ej: 555-55-55-55"
-          id="telephone"
-          type="number"
-          name="telephone"
+          id="phone"
+          type="tel"
+          name="phone"
           value={props.data.phone}
           inputValue={props.inputValue}
+          data={props.data}
         />
 
         <FillInputs
@@ -68,6 +73,7 @@ function Fill(props) {
           name="linkedin"
           value={props.data.linkedin}
           inputValue={props.inputValue}
+          data={props.data}
         />
 
         <FillInputs
@@ -79,6 +85,7 @@ function Fill(props) {
           name="github"
           value={props.data.github}
           inputValue={props.inputValue}
+          data={props.data}
         />
       </div>
     </>

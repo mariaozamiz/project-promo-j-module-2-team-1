@@ -13,7 +13,7 @@ import "../stylesheets/pages/design.scss";
 // import { checkPropTypes } from "prop-types";
 
 let userData = {
-  // pallete: 2,
+  photo: defaultImage,
 };
 const openOutside = "_blank";
 
@@ -23,7 +23,6 @@ function Design() {
   );
   //const [loading, setLoading] = useState(false);
   const [isAvatarDefault, setIsAvatarDefault] = useState(true);
-  const [profile, setProfile] = useState({ avatar: defaultImage });
   const [cardURL, setCardURL] = useState("");
   const [twitterLink, settwitterLink] = useState(
     "https://twitter.com/intent/tweet"
@@ -33,11 +32,6 @@ function Design() {
     //setLoading(true);
     localStorage.setItem("myValueLocalStorage", JSON.stringify(data));
     //setLoading(false);
-  });
-
-  useEffect(() => {
-    const newPhoto = { ...data, photo: profile };
-    localStorage.setItem("myValueLocalStorage", JSON.stringify(newPhoto));
   });
 
   const handleInputsValue = (inputInfo) => {
@@ -56,8 +50,6 @@ function Design() {
   };
 
   const updateAvatar = (img) => {
-    const newProfile = { ...profile, avatar: img };
-    setProfile(newProfile);
     setData({ ...data, photo: img });
     setIsAvatarDefault(false);
   };
@@ -132,7 +124,7 @@ function Design() {
               <Fill
                 inputValue={handleInputsValue}
                 data={data}
-                avatar={profile.avatar}
+                avatar={data.photo}
                 isAvatarDefault={isAvatarDefault}
                 updateAvatar={updateAvatar}
               />
