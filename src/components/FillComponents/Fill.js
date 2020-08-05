@@ -6,7 +6,7 @@ import "../../stylesheets/layout/fill/fill.scss";
 function Fill(props) {
   return (
     <>
-      <div className="collapsible__content">
+      <div className={props.collapseContentClassname}>
         <FillInputs
           name="name"
           label="Nombre completo"

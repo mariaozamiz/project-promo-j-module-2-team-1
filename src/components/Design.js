@@ -42,6 +42,7 @@ function Design() {
   // console.log(userData, data, userData === data);
 
   const handleClickCollapsible = (props) => {
+    // solo hacerlo en el id que corresponda
     setCollapseContentClassname(
       collapseContentClassname === "collapsible__content hidden"
         ? "collapsible__content"
@@ -58,11 +59,18 @@ function Design() {
           <form className="form">
             <fieldset className="form__design ">
               <Collapsible name="Diseña" icon="far fa-object-ungroup" />
-              <Palletes inputValue={handleInputsValue} />
+              <Palletes
+                inputValue={handleInputsValue}
+                collapseContentClassname={collapseContentClassname}
+              />
             </fieldset>
             <fieldset className="form__fill ">
               <Collapsible name="Rellena" icon="far fa-keyboard" />
-              <Fill inputValue={handleInputsValue} data={data} />
+              <Fill
+                inputValue={handleInputsValue}
+                data={data}
+                collapseContentClassname={collapseContentClassname}
+              />
             </fieldset>
 
             <fieldset className="form__share ">

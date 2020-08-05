@@ -24,7 +24,7 @@ function Palletes(props) {
 
   return (
     <>
-      <div className="collapsible__content">
+      <div className={props.collapseContentClassname}>
         <legend>Colores</legend>
         {renderPalletes()}
       </div>
