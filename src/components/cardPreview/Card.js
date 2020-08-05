@@ -3,6 +3,8 @@ import ListIcons from "./ListIcons";
 import "../../stylesheets/layout/cardPreview/card.scss";
 
 function Card(props) {
+  console.log(props.data.photo);
+
   return (
     <div className={`card`}>
       <div className={`card__id${1}`}>
@@ -13,7 +15,10 @@ function Card(props) {
           {props.data.job || "Front End Developer"}
         </p>
       </div>
-      <div className={`profile card__photo${1}`}>
+      <div
+        className={`profile card__photo${1}`}
+        style={{ backgroundImage: `url(${props.data.photo})` }}
+      >
         <div className="profile__image "></div>
       </div>
       <div className="card__contacts">

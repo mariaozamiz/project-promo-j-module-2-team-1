@@ -12,7 +12,9 @@ import defaultImage from "./defaultImage";
 import "../stylesheets/pages/design.scss";
 // import { checkPropTypes } from "prop-types";
 
-let userData = {};
+let userData = {
+  photo: defaultImage,
+};
 const openOutside = "_blank";
 
 function Design() {
@@ -122,7 +124,6 @@ function Design() {
               <Fill
                 inputValue={handleInputsValue}
                 data={data}
-                // avatar={profile.avatar}
                 avatar={data.photo}
                 isAvatarDefault={isAvatarDefault}
                 updateAvatar={updateAvatar}
