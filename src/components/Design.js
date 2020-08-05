@@ -14,18 +14,19 @@ let userData = {};
 
 function Design() {
   const [data, setData] = useState(
-    localStorage.getItem("myValueInLocalStorage") || userData
+    JSON.parse(localStorage.getItem("myValueLocalStorage")) || userData
   );
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    localStorage.setItem("myDataLocalstorage", data);
-    setLoading(false);
-  }, [data]);
+    //setLoading(true);
+    localStorage.setItem("myValueLocalStorage", JSON.stringify(data));
+    //setLoading(false);
+  });
 
   const handleInputsValue = (inputInfo) => {
     // console.log(inputInfo);
+
     setData({
       /* name: data.name,
       job: data.job,
@@ -39,7 +40,7 @@ function Design() {
   };
 
   const resetUserData = () => {
-    setData({ ...userData });
+    setData({});
   };
 
   /*const handlePalleteValue = (ev) => {
@@ -69,9 +70,9 @@ function Design() {
                 iconCollapse="fas fa-chevron-down"
               />
               <Fill inputValue={handleInputsValue} data={data} />
-              <p>
+              {/* <p>
                 {loading === true ? "Cargando..." : "Mostrando tus datos..."}
-              </p>
+              </p> */}
             </fieldset>
 
             <fieldset className="form__share collapsable--open">
