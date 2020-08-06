@@ -50,7 +50,15 @@ function Design() {
   };
 
   const resetUserData = () => {
-    setData({ photo: defaultImage });
+    setData({
+      name: "",
+      job: "",
+      photo: defaultImage,
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+    });
   };
 
   const handleClickCollapsible = (props) => {
