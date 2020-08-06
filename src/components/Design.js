@@ -55,7 +55,15 @@ function Design() {
   };
 
   const resetUserData = () => {
-    setData({});
+    setData({
+      name: "",
+      job: "",
+      photo: defaultImage,
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+    });
   };
 
   /*const handlePalleteValue = (ev) => {
