@@ -8,7 +8,7 @@ function Preview(props) {
     <section className="preview">
       <div className="preview__wrapper">
         <ButtonReset reset={props.reset} />
-        <Card data={props.data} />
+        <Card data={props.data} openOutside={props.openOutside} />
       </div>
     </section>
   );

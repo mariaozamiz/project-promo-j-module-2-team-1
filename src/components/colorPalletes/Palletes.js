@@ -1,35 +1,40 @@
-import React from "react";
-import Pallete from "./Pallete";
-import "../../stylesheets/layout/colorPalletes/colorPalletes.scss";
+import React from 'react';
+import Pallete from './Pallete';
+import '../../stylesheets/layout/colorPalletes/colorPalletes.scss';
 
 const colorPalletes = [
-  ["color-cold-1", "color-cold-2", "color-cold-3"],
-  ["color-warm-1", "color-warm-2", "color-warm-3"],
-  ["color-neutral-1", "color-neutral-2", "color-neutral-3"],
+    ['color-cold-1', 'color-cold-2', 'color-cold-3'],
+    ['color-warm-1', 'color-warm-2', 'color-warm-3'],
+    ['color-neutral-1', 'color-neutral-2', 'color-neutral-3'],
 ];
 
 function Palletes(props) {
-  function renderPalletes() {
-    return colorPalletes.map((element, index) => {
-      return (
-        <Pallete
-          key={index}
-          number={index + 1}
-          colors={element}
-          inputValue={props.inputValue}
-        />
-      );
-    });
-  }
+    function renderPalletes() {
+        return colorPalletes.map((element, index) => {
+            return (
+                <Pallete
+                    key={index}
+                    number={index + 1}
+                    colors={element}
+                    // inputValue={props.inputValue}
+                    checked={index + 1 === props.selectedPallete}
+                    inputValue={props.inputValue}
+                />
+            );
+        });
+    }
 
-  return (
-    <>
-      <div className={props.collapseContentClassname}>
-        <legend>Colores</legend>
-        {renderPalletes()}
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div className="collapsible__content">
+                <legend>Colores</legend>
+                {renderPalletes()}
+            </div>
+        </>
+    );
 }
-//borré la clase hidden del className="collapsible__content"
+Palletes.defaultProps = {
+    selectedPallete: 1,
+};
+
 export default Palletes;
