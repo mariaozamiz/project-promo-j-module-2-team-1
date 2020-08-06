@@ -41,7 +41,7 @@ function Card(props) {
             colorPallete={props.data.pallete}
             icon="fab fa-linkedin-in"
             iconClass="linkedin"
-            link={`https://www.linkedin.com/in${props.data.linkedin}`}
+            link={`https://www.linkedin.com/in/${props.data.linkedin}`}
             openOutside={props.openOutside}
             data={props.data}
           />
