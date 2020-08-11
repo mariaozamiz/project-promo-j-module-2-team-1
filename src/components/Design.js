@@ -27,9 +27,8 @@ function Design() {
   const [twitterLink, settwitterLink] = useState(
     "https://twitter.com/intent/tweet"
   );
-  const [collapseContentClassname, setCollapseContentClassname] = useState(
-    "collapsible__content hidden"
-  );
+
+  const [isOpen, setIsOpen] = useState("collapsible-1");
 
   useEffect(() => {
     // setLoading(true);
@@ -61,13 +60,12 @@ function Design() {
     });
   };
 
-  const handleClickCollapsible = (props) => {
-    // solo hacerlo en el id que corresponda
-    setCollapseContentClassname(
-      collapseContentClassname === "collapsible__content hidden"
-        ? "collapsible__content"
-        : "collapsible__content hidden"
-    );
+  const handleClickCollapsible = (targetId) => {
+    if (targetId !== isOpen) {
+      setIsOpen(targetId);
+    } else {
+      setIsOpen("");
+    }
   };
 
   const showURL = (result) => {
@@ -112,19 +110,26 @@ function Design() {
         <section>
           <form className="form">
             <fieldset className="form__design ">
-              <Collapsible name="Diseña" icon="far fa-object-ungroup" />
+              <Collapsible
+                icon="far fa-object-ungroup"
+                name="Diseña"
+                id="collapsible-1"
+                handleClickCollapsible={handleClickCollapsible}
+              />
               <Palletes
                 inputValue={handleInputsValue}
                 selectedPallete={data.pallete}
-                collapseContentClassname={collapseContentClassname}
+                id="collapsible-1"
+                isOpen={isOpen}
               />
             </fieldset>
+
             <fieldset className="form__fill ">
-              <Collapsible name="Rellena" icon="far fa-keyboard" />
-              <Fill
-                inputValue={handleInputsValue}
-                data={data}
-                collapseContentClassname={collapseContentClassname}
+              <Collapsible
+                icon="far fa-keyboard"
+                name="Rellena"
+                id="collapsible-2"
+                handleClickCollapsible={handleClickCollapsible}
               />
               <Fill
                 inputValue={handleInputsValue}
@@ -132,7 +137,10 @@ function Design() {
                 avatar={data.photo}
                 isAvatarDefault={isAvatarDefault}
                 updateAvatar={updateAvatar}
+                id="collapsible-2"
+                isOpen={isOpen}
               />
+
               {/* <p>
                 {loading === true ? "Cargando..." : "Mostrando tus datos..."}
               </p> */}
@@ -143,10 +151,11 @@ function Design() {
                 handleClickCollapsible={handleClickCollapsible}
                 name="Comparte"
                 icon="fas fa-share-alt"
+                id="collapsible-3"
               />
               <ShareContent
-                handleClickCollapsible={handleClickCollapsible}
-                collapseContentClassname={collapseContentClassname}
+                isOpen={isOpen}
+                id="collapsible-3"
                 iconTwitter="fab fa-twitter"
                 SendData={SendData}
                 cardURL={cardURL}

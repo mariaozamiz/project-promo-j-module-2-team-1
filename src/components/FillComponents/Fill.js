@@ -6,7 +6,7 @@ import "../../stylesheets/layout/fill/fill.scss";
 function Fill(props) {
   return (
     <>
-      <div className={props.collapseContentClassname}>
+      <div className={props.isOpen === props.id ? "" : "hidden"}>
         <FillInputs
           name="name"
           label="Nombre completo"
