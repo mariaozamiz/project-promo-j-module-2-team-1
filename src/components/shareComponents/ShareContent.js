@@ -5,7 +5,7 @@ import "../../stylesheets/layout/shareContent/share.scss";
 
 function ShareContent(props) {
   return (
-    <div className="collapsible__content">
+    <div className={props.isOpen === props.id ? "" : "hidden"}>
       <ShareButton SendData={props.SendData} />
       <TwitterContent
         iconTwitter={props.iconTwitter}

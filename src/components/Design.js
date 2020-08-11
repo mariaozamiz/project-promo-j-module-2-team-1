@@ -21,29 +21,23 @@ function Design() {
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("myValueLocalStorage")) || userData
   );
-  //const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [isAvatarDefault, setIsAvatarDefault] = useState(true);
   const [cardURL, setCardURL] = useState("");
   const [twitterLink, settwitterLink] = useState(
     "https://twitter.com/intent/tweet"
   );
 
+  const [isOpen, setIsOpen] = useState("collapsible-1");
+
   useEffect(() => {
-    //setLoading(true);
+    // setLoading(true);
     localStorage.setItem("myValueLocalStorage", JSON.stringify(data));
-    //setLoading(false);
+    // setLoading(false);
   });
 
   const handleInputsValue = (inputInfo) => {
-    // console.log(inputInfo);
-
     setData({
-      /* name: data.name,
-      job: data.job,
-      email: data.email,
-      linkedin: data.linkedin,
-      github: data.github,
-      phone: data.phone, */
       ...data,
       [inputInfo.attr]: inputInfo.value,
     });
@@ -66,10 +60,13 @@ function Design() {
     });
   };
 
-  /*const handlePalleteValue = (ev) => {
-    console.log('paleta', ev);
-  };*/
-  // console.log(userData, data, userData === data);
+  const handleClickCollapsible = (targetId) => {
+    if (targetId !== isOpen) {
+      setIsOpen(targetId);
+    } else {
+      setIsOpen("");
+    }
+  };
 
   const showURL = (result) => {
     if (result.success === true) {
@@ -112,22 +109,27 @@ function Design() {
         <Preview data={data} reset={resetUserData} openOutside={openOutside} />
         <section>
           <form className="form">
-            <fieldset className="form__design collapsable--open">
+            <fieldset className="form__design ">
               <Collapsible
-                name="Diseña"
                 icon="far fa-object-ungroup"
-                iconCollapse="fas fa-chevron-down"
+                name="Diseña"
+                id="collapsible-1"
+                handleClickCollapsible={handleClickCollapsible}
               />
               <Palletes
-                selectedPallete={data.pallete}
                 inputValue={handleInputsValue}
+                selectedPallete={data.pallete}
+                id="collapsible-1"
+                isOpen={isOpen}
               />
             </fieldset>
-            <fieldset className="form__fill collapsable--open">
+
+            <fieldset className="form__fill ">
               <Collapsible
-                name="Rellena"
                 icon="far fa-keyboard"
-                iconCollapse="fas fa-chevron-down"
+                name="Rellena"
+                id="collapsible-2"
+                handleClickCollapsible={handleClickCollapsible}
               />
               <Fill
                 inputValue={handleInputsValue}
@@ -135,19 +137,25 @@ function Design() {
                 avatar={data.photo}
                 isAvatarDefault={isAvatarDefault}
                 updateAvatar={updateAvatar}
+                id="collapsible-2"
+                isOpen={isOpen}
               />
+
               {/* <p>
                 {loading === true ? "Cargando..." : "Mostrando tus datos..."}
               </p> */}
             </fieldset>
 
-            <fieldset className="form__share collapsable--open">
+            <fieldset className="form__share ">
               <Collapsible
+                handleClickCollapsible={handleClickCollapsible}
                 name="Comparte"
                 icon="fas fa-share-alt"
-                iconCollapse="fas fa-chevron-down"
+                id="collapsible-3"
               />
               <ShareContent
+                isOpen={isOpen}
+                id="collapsible-3"
                 iconTwitter="fab fa-twitter"
                 SendData={SendData}
                 cardURL={cardURL}
