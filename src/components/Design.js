@@ -29,6 +29,7 @@ function Design() {
   );
 
   const [isOpen, setIsOpen] = useState("collapsible-1");
+  const [activeShare, setActiveShare] = useState("hidden");
 
   useEffect(() => {
     // setLoading(true);
@@ -74,6 +75,7 @@ function Design() {
       settwitterLink(
         `https://twitter.com/intent/tweet?text=Tu%20tarjeta%20es:%20${result.cardURL}`
       );
+      setActiveShare("");
     } else {
       setCardURL("¡Vaya! Ha habido un error");
     }
@@ -148,7 +150,7 @@ function Design() {
               </p> */}
             </fieldset>
 
-            <fieldset className="form__share ">
+            <fieldset>
               <Collapsible
                 handleClickCollapsible={handleClickCollapsible}
                 name="Comparte"
@@ -164,6 +166,7 @@ function Design() {
                 cardURL={cardURL}
                 twitterLink={twitterLink}
                 openOutside={openOutside}
+                activeShare={activeShare}
               />
             </fieldset>
           </form>

@@ -12,6 +12,7 @@ function ShareContent(props) {
         cardURL={props.cardURL}
         twitterLink={props.twitterLink}
         openOutside={props.openOutside}
+        activeShare={props.activeShare}
       />
     </div>
   );

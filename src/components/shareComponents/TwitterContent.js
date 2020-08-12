@@ -3,7 +3,7 @@ import "../../stylesheets/layout/shareContent/twitterContent.scss";
 
 function TwitterContent(props) {
   return (
-    <div className="twitter">
+    <div className={`twitter ${props.activeShare}`}>
       <p className="twitter-paragraph">
         ¡Mira mi tarjeta de visita de AdaVillana!
       </p>
