@@ -59,6 +59,8 @@ function Design() {
       linkedin: "",
       github: "",
     });
+    setCardURL("");
+    setActiveShare("hidden");
   };
 
   const handleClickCollapsible = (targetId) => {
