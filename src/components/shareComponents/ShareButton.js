@@ -5,7 +5,7 @@ function ShareButton(props) {
   return (
     <button
       type="submit"
-      className="button__share js-button__share"
+      className={`button__share ${props.buttonDisabled}`}
       onClick={props.SendData}
     >
       <i className="far fa-address-card"></i>

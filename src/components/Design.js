@@ -10,7 +10,6 @@ import defaultImage from "./defaultImage";
 
 // sass
 import "../stylesheets/pages/design.scss";
-// import { checkPropTypes } from "prop-types";
 
 let userData = {
   photo: defaultImage,
@@ -21,7 +20,6 @@ function Design() {
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("myValueLocalStorage")) || userData
   );
-  // const [loading, setLoading] = useState(false);
   const [isAvatarDefault, setIsAvatarDefault] = useState(true);
   const [cardURL, setCardURL] = useState("");
   const [twitterLink, settwitterLink] = useState(
@@ -30,12 +28,11 @@ function Design() {
 
   const [isOpen, setIsOpen] = useState("collapsible-1");
   const [activeShare, setActiveShare] = useState("hidden");
+  const [buttonDisabled, setButtonDisabled] = useState("");
 
   useEffect(() => {
-    // setLoading(true);
     localStorage.setItem("myValueLocalStorage", JSON.stringify(data));
-    // setLoading(false);
-  });
+  }, [data]);
 
   const handleInputsValue = (inputInfo) => {
     setData({
@@ -61,6 +58,7 @@ function Design() {
     });
     setCardURL("");
     setActiveShare("hidden");
+    setButtonDisabled("");
   };
 
   const handleClickCollapsible = (targetId) => {
@@ -78,6 +76,7 @@ function Design() {
         `https://twitter.com/intent/tweet?text=Tu%20tarjeta%20es:%20${result.cardURL}`
       );
       setActiveShare("");
+      setButtonDisabled("disabled");
     } else {
       setCardURL("¡Vaya! Ha habido un error");
     }
@@ -98,6 +97,7 @@ function Design() {
       .then((resp) => {
         return resp.json();
       })
+
       .then((result) => {
         showURL(result);
       })
@@ -146,10 +146,6 @@ function Design() {
                 id="collapsible-2"
                 isOpen={isOpen}
               />
-
-              {/* <p>
-                {loading === true ? "Cargando..." : "Mostrando tus datos..."}
-              </p> */}
             </fieldset>
 
             <fieldset>
@@ -169,6 +165,7 @@ function Design() {
                 twitterLink={twitterLink}
                 openOutside={openOutside}
                 activeShare={activeShare}
+                buttonDisabled={buttonDisabled}
               />
             </fieldset>
           </form>

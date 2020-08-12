@@ -6,7 +6,10 @@ import "../../stylesheets/layout/shareContent/share.scss";
 function ShareContent(props) {
   return (
     <div className={props.isOpen === props.id ? "" : "hidden"}>
-      <ShareButton SendData={props.SendData} />
+      <ShareButton
+        SendData={props.SendData}
+        buttonDisabled={props.buttonDisabled}
+      />
       <TwitterContent
         iconTwitter={props.iconTwitter}
         cardURL={props.cardURL}

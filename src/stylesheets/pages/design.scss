@@ -2,12 +2,10 @@
 @import "../core/variables";
 @import "../core/reset";
 
-// estos dos están presentes solamente en el header y en el footer
-// .wrapper {
-//   padding-left: 26px;
-//   padding-right: 26px;
-// }
-
+// maquetación del main
+.design__container {
+  min-height: 100vh;
+}
 @media all and (min-width: 768px) {
   .design__container {
     display: flex;
@@ -15,5 +13,3 @@
     padding: 20px 30px;
   }
 }
-
-// clase hiden, lo podemos utilizar desde aquí o en colapsables o meterlo en los parciales de sass donde lo usemos.
