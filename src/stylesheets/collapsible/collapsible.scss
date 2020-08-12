@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   .h2 {
     font-size: 18px;
@@ -19,4 +20,8 @@
     margin-right: 10px;
     color: $color-tertiary;
   }
+}
+
+.transform {
+  transform: rotateX(180deg);
 }

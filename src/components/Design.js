@@ -115,6 +115,7 @@ function Design() {
                 name="Diseña"
                 id="collapsible-1"
                 handleClickCollapsible={handleClickCollapsible}
+                isOpen={isOpen}
               />
               <Palletes
                 inputValue={handleInputsValue}
@@ -130,6 +131,7 @@ function Design() {
                 name="Rellena"
                 id="collapsible-2"
                 handleClickCollapsible={handleClickCollapsible}
+                isOpen={isOpen}
               />
               <Fill
                 inputValue={handleInputsValue}
@@ -152,6 +154,7 @@ function Design() {
                 name="Comparte"
                 icon="fas fa-share-alt"
                 id="collapsible-3"
+                isOpen={isOpen}
               />
               <ShareContent
                 isOpen={isOpen}

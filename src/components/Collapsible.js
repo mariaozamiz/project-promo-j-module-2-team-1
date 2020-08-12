@@ -17,7 +17,11 @@ function Collapsible(props) {
         {props.name}
       </h2>
       <div>
-        <i className="fas fa-chevron-down"></i>
+        <i
+          className={`fas fa-chevron-down ${
+            props.isOpen === props.id ? "" : "transform"
+          }`}
+        ></i>
       </div>
     </div>
   );
