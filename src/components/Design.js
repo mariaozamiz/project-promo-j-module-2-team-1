@@ -6,7 +6,8 @@ import Palletes from "./colorPalletes/Palletes.js";
 import Fill from "./FillComponents/Fill";
 import ShareContent from "./shareComponents/ShareContent";
 import Footer from "./HeaderFooter/Footer";
-import defaultImage from "./defaultImage";
+
+import defaultImage from "../images/malefica.jpg";
 
 // sass
 import "../stylesheets/pages/design.scss";
