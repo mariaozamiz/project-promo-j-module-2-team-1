@@ -11,7 +11,7 @@ function Fill(props) {
           name="name"
           label="Nombre completo"
           className="js-input-name"
-          placeholder="Ej: Sally Jill"
+          placeholder="Ej: Reina Grimhilde"
           id="name"
           type="text"
           value={props.data.name}
@@ -23,7 +23,7 @@ function Fill(props) {
           name="job"
           label="Puesto"
           className="js-input-job"
-          placeholder="Ej: Font-end unicorn"
+          placeholder="Ej: La más bella del reino"
           id="job"
           type="text"
           value={props.data.job}
@@ -43,7 +43,7 @@ function Fill(props) {
         <FillInputs
           label="Email"
           className="js-input-email"
-          placeholder="Ej: sally-hill@gmail.com"
+          placeholder="Ej: soylamasmejor@gmail.com"
           id="email"
           type="email"
           name="email"
@@ -55,7 +55,7 @@ function Fill(props) {
         <FillInputs
           label="Teléfono"
           className="js-input-telephone"
-          placeholder="Ej: 555-55-55-55"
+          placeholder="Ej: 666-66-66-66"
           id="phone"
           type="tel"
           name="phone"
@@ -67,7 +67,7 @@ function Fill(props) {
         <FillInputs
           label="Linkedin"
           className="js-input-linkedin"
-          placeholder="Ej: linkedin.com/in/sally.hill"
+          placeholder="Ej: linkedin.com/in/LaReina"
           id="linkedin"
           type="text"
           name="linkedin"
@@ -79,7 +79,7 @@ function Fill(props) {
         <FillInputs
           label="Github"
           className="js-input-github"
-          placeholder="Ej: sally-hill"
+          placeholder="Ej: RGrimhilde"
           id="github"
           type="text"
           name="github"
